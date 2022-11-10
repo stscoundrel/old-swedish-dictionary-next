@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-template",
-  "description": "Next.js template with lints & test",
+  "name": "old-swedish-dictionary-next",
+  "description": "Next.js implementation of Medieval Swedish Dictionary by K.F. Söderwall",
   "version": "0.1.0",
   "private": true,
-  "repository": "https://github.com/stscoundrel/nextjs-template.git",
+  "repository": "https://github.com/stscoundrel/old-swedish-dictionary-next.git",
   "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
   "licenses": [
     {
