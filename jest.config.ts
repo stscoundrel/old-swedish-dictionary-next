@@ -23,8 +23,10 @@ const customJestConfig = {
   },
   moduleDirectories: ['src', 'node_modules'],
   setupFiles: [
-    '<rootDir>/setupTests.js',
+    '<rootDir>/setupTests.ts',
   ],
 }
 
-module.exports = createJestConfig(customJestConfig)
+const config = createJestConfig(customJestConfig)
+
+export default config
