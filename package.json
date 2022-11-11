@@ -21,18 +21,22 @@
     "jest": "jest --verbose --runInBand --passWithNoTests",
     "test:unit": "yarn jest",
     "test:integration": "yarn cypress run --env env=test --spec 'tests/integration/tests/**/*'",
-    "test:coverage": "jest --coverage tests src/components --coverageThreshold='{\"global\":{\"statements\":\"90\", \"functions\":\"90\", \"branches\":\"90\", \"lines\":\"90\"}}'"
+    "test:coverage": "jest --coverage tests src/components --coverageThreshold='{\"global\":{\"statements\":\"90\", \"functions\":\"90\", \"branches\":\"90\", \"lines\":\"90\"}}'",
+    "create:alphabet": "ts-node scripts/output-alphabet.ts"
   },
   "dependencies": {
     "next": "^13.0.2",
     "next-pwa": "^5.5.4",
+    "old-swedish-dictionary": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reset-css": "^5.0.1",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.1",
