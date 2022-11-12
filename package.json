@@ -32,7 +32,8 @@
     "react-dom": "^18.2.0",
     "reset-css": "^5.0.1",
     "sass": "^1.55.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "teljari": "^1.1.1"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
