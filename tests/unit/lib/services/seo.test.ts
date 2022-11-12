@@ -1,4 +1,4 @@
-import { getDefaultSEO, getLetterSEO, getWordSEO } from 'lib/utils/seo'
+import { getDefaultSEO, getLetterSEO, getWordSEO } from 'lib/services/seo'
 import { DictionaryEntry } from 'lib/models/dictionary'
 
 describe('SEO / meta tags tests', () => {
