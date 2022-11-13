@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "futhork": "^1.1.8",
+    "markari": "^1.0.7",
     "next": "^13.0.3",
     "next-pwa": "^5.6.0",
     "old-swedish-dictionary": "^0.2.0",
