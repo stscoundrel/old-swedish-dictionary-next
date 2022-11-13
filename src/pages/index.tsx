@@ -1,10 +1,28 @@
+// Services.
+import { getAlphabet, AlphabetLetter } from 'lib/services/dictionary'
+
 // Components.
 import Layout from 'components/Layout'
 import ContentArea from 'components/ContentArea'
+import { ContentType } from 'lib/models/content-types'
 
-export default function Index() {
+interface IndexProps{
+  letters: AlphabetLetter[]
+}
+
+export async function getStaticProps() {
+  const letters = getAlphabet()
+
+  return {
+    props: {
+      letters,
+    },
+  }
+}
+
+export default function Index({ letters }: IndexProps) {
   return (
-    <Layout>
+    <Layout letters={letters} letter={null} type={ContentType.Page} word={null} words={[]}>
       <ContentArea>
         <p>There is no strength in numbers</p>
         <p>Have no such misconception</p>
