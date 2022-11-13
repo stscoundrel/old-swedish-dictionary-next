@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordList component Matches snapshot 1`] = `
+<ul
+  className="list"
+>
+  <li>
+    <a
+      href="/word/afkora"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      afköra
+    </a>
+  </li>
+  <li>
+    <a
+      href="/word/afkora-2"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      afköra 2
+    </a>
+  </li>
+  <li>
+    <a
+      href="/word/afkora-3"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      afköra 3
+    </a>
+  </li>
+  <li>
+    <a
+      href="/word/afkora-4"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      afköra 4
+    </a>
+  </li>
+</ul>
+`;
