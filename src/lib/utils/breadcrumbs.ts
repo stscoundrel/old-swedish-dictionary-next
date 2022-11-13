@@ -6,7 +6,7 @@ export interface Breadcrumb{
     url: string,
 }
 
-interface BreadcrumbRequest{
+export interface BreadcrumbRequest{
     word?: string | null,
     letter?: string | null
 }

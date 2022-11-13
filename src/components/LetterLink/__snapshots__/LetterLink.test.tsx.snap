@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LetterLink component Matches snapshot 1`] = `
+<a
+  href="/letter/s"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onTouchStart={[Function]}
+>
+  s
+</a>
+`;
