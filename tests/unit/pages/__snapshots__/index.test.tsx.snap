@@ -422,14 +422,43 @@ Array [
     <section
       className="section"
     >
+      <h1
+        className="h2"
+      >
+        Old Swedish Dictionary
+      </h1>
       <p>
-        There is no strength in numbers
+        Online version of the "
+        <em>
+          Ordbok Öfver svenska medeltids-språket
+        </em>
+        ", the dictionary of Medieval Swedish by K.F Söderwall.
       </p>
       <p>
-        Have no such misconception
+        The dictionary contains over 40 000 translations from Old Swedish to Swedish. This is the largest dictionary of the language.
+      </p>
+      <a
+        href="/search"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        Search the dictionary
+      </a>
+    </section>
+    <section
+      className="section"
+    >
+      <h2
+        className="h3"
+      >
+        What is Old Swedish?
+      </h2>
+      <p>
+        Old Swedish was a language spoken in Sweden (and Finland) from 1225 to 1526. It is the middle stage between Old East Norse (language of the Vikings) and modern Swedish.
       </p>
       <p>
-        But when you need me be assured I wont be far away
+        Early Old Swedish was markedly different from modern Sweden: it had a more complex case structure and also still had the original Germanic three-gender system. Nouns, adjectives, pronouns and certain numerals were inflected in four cases.
       </p>
     </section>
     <div
