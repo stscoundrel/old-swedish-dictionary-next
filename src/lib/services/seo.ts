@@ -3,7 +3,7 @@ import { capitalize } from 'lib/utils/strings'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
 
-interface SEO {
+export interface SEO {
   title: string,
   description: string
 }

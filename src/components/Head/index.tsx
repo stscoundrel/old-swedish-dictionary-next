@@ -1,11 +1,64 @@
 import NextHead from 'next/head'
 
-export default function Head() {
-  // Populate per site/page logic.
-  const title = ''
-  const description = ''
-  const canonicalUrl = ''
-  const siteName = ''
+// Utils.
+import { getDefaultSchema, getLetterSchema, getWordSchema } from 'lib/services/schema'
+import {
+  getDefaultSEO, getLetterSEO, getWordSEO, SEO,
+} from 'lib/services/seo'
+import { getLetterLink, getMainUrl, getWordLink } from 'lib/utils/links'
+import { ContentType } from 'lib/models/content-types'
+import { DictionaryEntry } from 'lib/models/dictionary'
+import { AlphabetLetter } from 'lib/services/dictionary'
+
+interface HeadProps{
+  type: ContentType,
+  word: DictionaryEntry | null,
+  words: DictionaryEntry[]
+  letter: AlphabetLetter | null,
+}
+
+export default function Head({
+  type, word, words = [], letter = null,
+}: HeadProps) {
+  const getCanonicalUrl = (): string => {
+    if (type === ContentType.Word && word) {
+      return getWordLink(word)
+    }
+
+    if (type === ContentType.Letter && letter) {
+      return getLetterLink(letter)
+    }
+
+    return getMainUrl()
+  }
+
+  const getSchema = (): string => {
+    if (type === ContentType.Word && word) {
+      return getWordSchema(word)
+    }
+
+    if (type === ContentType.Letter && words) {
+      return getLetterSchema(words)
+    }
+
+    return getDefaultSchema()
+  }
+
+  const getSeo = (): SEO => {
+    if (type === ContentType.Word && word) {
+      return getWordSEO(word)
+    }
+
+    if (type === ContentType.Letter && letter && words) {
+      return getLetterSEO(letter, words)
+    }
+
+    return getDefaultSEO()
+  }
+
+  const { title, description } = getSeo()
+  const canonicalUrl = getCanonicalUrl()
+  const schema = getSchema()
 
   return (
     <NextHead>
@@ -26,7 +79,7 @@ export default function Head() {
         />
         <meta
           property='og:site_name'
-          content={siteName}
+          content='Old Swedish Dictionary'
         />
         <meta
             property='og:url'
@@ -52,6 +105,8 @@ export default function Head() {
         <meta name="theme-color" content="#3b4f68" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <script type='application/ld+json' dangerouslySetInnerHTML={ { __html: schema } }/>
+        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_SITE_VERIFICATION} />
     </NextHead>
   )
 }
