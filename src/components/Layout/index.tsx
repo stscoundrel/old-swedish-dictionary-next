@@ -1,9 +1,9 @@
 // Components.
 import Head from 'components/Head'
-// import Footer from 'components/Footer'
+import Footer from 'components/Footer'
 import Breadcrumbs from 'components/Breadcrumbs'
 import Navigation from 'components/Navigation'
-// import BackToTop from 'components/BackToTop'
+import BackToTop from 'components/BackToTop'
 import { ContentType } from 'lib/models/content-types'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
@@ -29,9 +29,9 @@ export default function Layout({
       </header>
       <main className="container">
         {children}
-        {/* <BackToTop /> */}
+        <BackToTop />
       </main>
-      {/* <Footer letters={letters}/> */}
+      <Footer letters={letters}/>
     </>
   )
 }
