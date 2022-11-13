@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
+<article
+  className="section"
+>
+  <header>
+    <h1
+      lang="non-swe"
+    >
+      Afköra
+    </h1>
+    <small
+      className="subHeading"
+    >
+      Old Swedish Dictionary - 
+      afköra
+    </small>
+    <p>
+      Meaning of Old Swedish word 
+      <em>
+        "
+        afköra
+        "
+      </em>
+       in Swedish.
+    </p>
+    <p>
+      As defined by K.F Söderwall's dictionary of Medieval Swedish:
+    </p>
+  </header>
+  <dl
+    className="definitionList"
+  >
+    <dt>
+      <strong>
+        afköra
+      </strong>
+    </dt>
+    <dd
+      lang="swe"
+    >
+       , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.
+    </dd>
+  </dl>
+  <p>
+    <strong>
+      Part of speech:
+    </strong>
+     
+    <em>
+      vb
+    </em>
+  </p>
+  <p>
+    <strong>
+      Grammatical aspect:
+    </strong>
+     
+    <em>
+      v.
+    </em>
+  </p>
+  <p>
+    Possible runic inscription in 
+    <em>
+      Medieval Futhork
+    </em>
+    :
+    <span
+      className="rune"
+    >
+      ᛆᚠᚴᚯᚱᛆ
+    </span>
+    <br />
+    <small>
+      Medieval Runes were used in Sweden from 12th to 17th centuries.
+    </small>
+  </p>
+</article>
+`;
+
+exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
+<article
+  className="section"
+>
+  <header>
+    <h1
+      lang="non-swe"
+    >
+      Afköra
+    </h1>
+    <small
+      className="subHeading"
+    >
+      Old Swedish Dictionary - 
+      afköra
+    </small>
+    <p>
+      Meaning of Old Swedish word 
+      <em>
+        "
+        afköra
+        "
+      </em>
+       in Swedish.
+    </p>
+    <p>
+      As defined by K.F Söderwall's dictionary of Medieval Swedish:
+    </p>
+  </header>
+  <dl
+    className="definitionList"
+  >
+    <dt>
+      <strong>
+        afköra
+      </strong>
+    </dt>
+    <dd
+      lang="swe"
+    >
+       , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.
+    </dd>
+  </dl>
+  <p>
+    Possible runic inscription in 
+    <em>
+      Medieval Futhork
+    </em>
+    :
+    <span
+      className="rune"
+    >
+      ᛆᚠᚴᚯᚱᛆ
+    </span>
+    <br />
+    <small>
+      Medieval Runes were used in Sweden from 12th to 17th centuries.
+    </small>
+  </p>
+</article>
+`;
