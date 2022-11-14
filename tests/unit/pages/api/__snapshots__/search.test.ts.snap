@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search API endpoint Should return search results 1`] = `
+[
+  {
+    "foundIn": [
+      "In headword: afköra",
+    ],
+    "headword": "afköra",
+    "slug": "afkora",
+  },
+  {
+    "foundIn": [
+      "In headword: utafköra",
+    ],
+    "headword": "utafköra",
+    "slug": "utafkora",
+  },
+]
+`;
