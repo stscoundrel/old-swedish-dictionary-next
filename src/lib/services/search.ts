@@ -1,11 +1,13 @@
 import { markWords } from 'markari'
 import { DictionaryEntry } from 'lib/models/dictionary'
 
-export interface SearchResult extends DictionaryEntry {
+export interface SearchResult {
+  headword: string,
+  slug: string,
   foundIn: string[],
 }
 
-type Criteria = 'headword' | 'definitions'
+export type Criteria = 'headword' | 'definitions'
 
 const formatResults = (
   results: DictionaryEntry[],
@@ -29,7 +31,8 @@ const formatResults = (
     }
 
     return {
-      ...result,
+      headword: result.headword,
+      slug: result.slug,
       foundIn,
     }
   })

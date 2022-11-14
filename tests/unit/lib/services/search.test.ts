@@ -9,12 +9,6 @@ describe('Search tests', () => {
 
     const expected = {
       headword: 'afköra',
-      partOfSpeech: 'vb',
-      grammaticalAspect: 'v.',
-      definitions: [
-        ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
-      ],
-      alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
       foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
     }
@@ -27,12 +21,6 @@ describe('Search tests', () => {
 
     const expected = {
       headword: 'afköra',
-      partOfSpeech: 'vb',
-      grammaticalAspect: 'v.',
-      definitions: [
-        ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
-      ],
-      alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
       foundIn: ['In headword: <mark>afköra</mark>'],
     }
@@ -46,12 +34,6 @@ describe('Search tests', () => {
 
     const expected = {
       headword: 'þiufstulin',
-      partOfSpeech: '',
-      grammaticalAspect: '',
-      definitions: [
-        'stulen.  &quot; ther war i räthen en kätil grypa och i nysthe, ther för:ne sigeridh kändes widher, ath tz war henne thiwf stolith i fran &quot; JTb 36 ( 1463) .  ib 61 ( 1462) . thenne ii vitnadha ok swora mz gäwa kwnsson vm en silffskedh . . . som honom war tiwffsvlin ib 75 (1481).',
-      ],
-      alternativeForms: ['tiwff- . ', '-stolin )'],
       slug: 'thiufstulin',
       foundIn: ['In headword: þiufstulin'],
     }
