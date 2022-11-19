@@ -16,7 +16,7 @@ describe('Dictionary tests', () => {
 
   test('Dictionary has added url slugs to source', () => {
     dictionary.forEach((entry) => {
-      expect(Object.keys(entry)).toEqual(['headword', 'partOfSpeech', 'grammaticalAspect', 'definitions', 'alternativeForms', 'slug'])
+      expect(Object.keys(entry)).toEqual(['headword', 'partOfSpeech', 'grammaticalAspect', 'information', 'definitions', 'alternativeForms', 'slug'])
     })
   })
 
@@ -59,8 +59,9 @@ describe('Dictionary tests', () => {
 
     const expected1 = {
       headword: 'afköra',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
@@ -70,8 +71,9 @@ describe('Dictionary tests', () => {
 
     const expected2 = {
       headword: 'släkträknan',
-      partOfSpeech: 'nn',
+      partOfSpeech: ['nn'],
       grammaticalAspect: '',
+      information: '',
       definitions: [
         'geneaogia idest generacio släkt ok släkträknan  GU C 20 s. 309 .',
       ],
@@ -81,10 +83,11 @@ describe('Dictionary tests', () => {
 
     const expected3 = {
       headword: 'äremark',
-      partOfSpeech: 'nn',
+      partOfSpeech: ['nn'],
       grammaticalAspect: '',
+      information: '',
       definitions: [
-        'utmark, ödemark.  M. G. Schybergsson, Finlands historia 1 (1902), s. 199 f.; O. Ahlbäck i &quot;Saga och sed&quot; 1962, s. 22 f.',
+        'utmark, ödemark.  M. G. Schybergsson, Finlands historia 1 (1902), s. 199 f.; O. Ahlbäck i "Saga och sed" 1962, s. 22 f.',
       ],
       alternativeForms: [],
       slug: 'aremark',

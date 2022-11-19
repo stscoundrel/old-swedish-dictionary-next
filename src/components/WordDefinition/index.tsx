@@ -9,7 +9,7 @@ interface WordDefinitionProps{
 
 export default function WordDefinition({ entry }: WordDefinitionProps) {
   const {
-    headword, partOfSpeech, grammaticalAspect, definitions,
+    headword, partOfSpeech, grammaticalAspect, information, definitions, alternativeForms,
   } = entry
 
   return (
@@ -34,15 +34,28 @@ export default function WordDefinition({ entry }: WordDefinitionProps) {
         </dl>
       ))}
 
-      {partOfSpeech && <p><strong>Part of speech:</strong> <em>{partOfSpeech}</em></p>}
+      {partOfSpeech.length > 0 && <p><strong>Part of speech:</strong> <em>{partOfSpeech.join(', ')}</em></p>}
+      {information
+        && <p><strong>Additional information:</strong> <em>{information}</em></p>
+      }
       {grammaticalAspect
         && <p><strong>Grammatical aspect:</strong> <em>{grammaticalAspect}</em></p>
+      }
+
+      {alternativeForms.length > 0
+        && <>
+        <strong>Alternative forms or notes:</strong>
+        <ul className="list">
+          {alternativeForms.map((alternativeForm, index) => <li key={`alternativeForm-${index}`}>{alternativeForm}</li>)}
+        </ul>
+        </>
       }
 
       <p>Possible runic inscription in <em>Medieval Futhork</em>:
         <span className={styles.rune}>{ lettersToRunes(headword) }</span><br />
       <small>Medieval Runes were used in Sweden from 12th to 17th centuries.</small>
       </p>
+
     </article>
   )
 }
