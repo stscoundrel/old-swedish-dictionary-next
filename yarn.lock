@@ -5049,10 +5049,10 @@ object.values@^1.1.5:
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
 
-old-swedish-dictionary@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/old-swedish-dictionary/-/old-swedish-dictionary-0.2.0.tgz#8f19286b860522f6232d35be3c5cf640f6446811"
-  integrity sha512-n41687IkOqdSIdupO/WofcakEItI3EPrbXqrHvRZsZSEAjBw3ioM2dSdnp6XL2/ZOeK61ZEET+2kcI1/VzvtYA==
+old-swedish-dictionary@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/old-swedish-dictionary/-/old-swedish-dictionary-1.0.0.tgz#0faf2c88541aeda7771f6f39dd40b5b8f3bb5748"
+  integrity sha512-pNPBJA7VVXXd5PBnXP6Iz0JGzIAl4/ZgSdB44aGCzpEn2u/MWxr9FLMl6YtkYqImldfpCNGIGtdNLhYtSU+QBw==
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"

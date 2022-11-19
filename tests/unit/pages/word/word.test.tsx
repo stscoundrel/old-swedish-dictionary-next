@@ -21,8 +21,9 @@ jest.mock('next/router', () => ({
 
 const entry = {
   headword: 'afköra',
-  partOfSpeech: 'vb',
+  partOfSpeech: ['vb'],
   grammaticalAspect: 'v.',
+  information: '',
   definitions: [
     ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
   ],

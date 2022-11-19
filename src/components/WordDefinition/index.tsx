@@ -34,7 +34,7 @@ export default function WordDefinition({ entry }: WordDefinitionProps) {
         </dl>
       ))}
 
-      {partOfSpeech && <p><strong>Part of speech:</strong> <em>{partOfSpeech}</em></p>}
+      {partOfSpeech.length > 0 && <p><strong>Part of speech:</strong> <em>{partOfSpeech.join(', ')}</em></p>}
       {grammaticalAspect
         && <p><strong>Grammatical aspect:</strong> <em>{grammaticalAspect}</em></p>
       }

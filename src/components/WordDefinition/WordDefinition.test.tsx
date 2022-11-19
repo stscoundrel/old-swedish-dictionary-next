@@ -4,7 +4,7 @@ import WordDefinition from './index'
 
 const entry = {
   headword: 'afköra',
-  partOfSpeech: 'vb',
+  partOfSpeech: ['vb'],
   grammaticalAspect: 'v.',
   definitions: [
     ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
@@ -19,7 +19,7 @@ const minimalEntry = {
   definitions: [
     ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
   ],
-  partOfSpeech: '',
+  partOfSpeech: [],
   grammaticalAspect: '',
   alternativeForms: [],
   slug: 'afkora',
