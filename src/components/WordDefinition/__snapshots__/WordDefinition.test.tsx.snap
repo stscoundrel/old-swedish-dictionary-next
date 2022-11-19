@@ -61,6 +61,16 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
       v.
     </em>
   </p>
+  <strong>
+    Alternative forms or notes:
+  </strong>
+  <ul
+    className="list"
+  >
+    <li>
+      -bortdrifva
+    </li>
+  </ul>
   <p>
     Possible runic inscription in 
     <em>
