@@ -9,7 +9,7 @@ interface WordDefinitionProps{
 
 export default function WordDefinition({ entry }: WordDefinitionProps) {
   const {
-    headword, partOfSpeech, grammaticalAspect, definitions,
+    headword, partOfSpeech, grammaticalAspect, information, definitions,
   } = entry
 
   return (
@@ -35,6 +35,9 @@ export default function WordDefinition({ entry }: WordDefinitionProps) {
       ))}
 
       {partOfSpeech.length > 0 && <p><strong>Part of speech:</strong> <em>{partOfSpeech.join(', ')}</em></p>}
+      {information
+        && <p><strong>Additional information:</strong> <em>{information}</em></p>
+      }
       {grammaticalAspect
         && <p><strong>Grammatical aspect:</strong> <em>{grammaticalAspect}</em></p>
       }
