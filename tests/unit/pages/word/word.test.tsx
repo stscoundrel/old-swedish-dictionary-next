@@ -31,32 +31,37 @@ const entry = {
   slug: 'afkora',
 }
 
+const letter = {
+  letter: 'a',
+  slug: 'a',
+}
+
 describe('Word page: render & usage', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
     root.render(
-      <Word entry={entry} letters={getAlphabet()} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
     )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Returns null if entry is unavailable', () => {
     const tree = renderer.create(
-      <Word entry={null} letters={getAlphabet()} />,
+      <Word entry={null} letters={getAlphabet()} letter={letter} />,
     ).toJSON()
     expect(tree).toBeNull()
   })
 
   test('Back button works', async () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
     )
 
     // Click back btn.
@@ -88,6 +93,7 @@ describe('Word page: data fetching', () => {
       props: {
         entry,
         letters: getAlphabet(),
+        letter,
       },
     }
 

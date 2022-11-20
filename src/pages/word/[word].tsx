@@ -12,10 +12,12 @@ import WordDefinition from 'components/WordDefinition'
 import Button from 'components/Button'
 import { ContentType } from 'lib/models/content-types'
 import { DictionaryEntry } from 'lib/models/dictionary'
+import { decodeLetter } from 'lib/utils/slugs'
 
 interface WordPageProps{
     entry: DictionaryEntry,
     letters: AlphabetLetter[],
+    letter: AlphabetLetter,
 }
 
 interface WordPageParams{
@@ -54,16 +56,22 @@ export async function getStaticProps(
   }
 
   const letters = getAlphabet()
+  const letter = letters.filter(
+    (alphabetLetter) => alphabetLetter.letter === decodeLetter(
+      entry.headword.charAt(0).toLocaleLowerCase(),
+    ),
+  )[0]
 
   return {
     props: {
       entry,
+      letter,
       letters,
     },
   }
 }
 
-export default function Word({ entry, letters }: WordPageProps) {
+export default function Word({ entry, letters, letter }: WordPageProps) {
   const router = useRouter()
 
   if (!entry) {
@@ -76,7 +84,7 @@ export default function Word({ entry, letters }: WordPageProps) {
         word={entry}
         words={[]}
         letters={letters}
-        letter={null}
+        letter={letter}
     >
       <WordDefinition entry={entry} />
       <Button text="Back" action={() => router.back()} />
