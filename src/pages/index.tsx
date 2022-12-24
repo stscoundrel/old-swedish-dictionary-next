@@ -51,6 +51,20 @@ export default function Index({ letters }: IndexProps) {
           were inflected in four cases.
         </p>
       </ContentArea>
+
+      <ContentArea>
+        <h2 className="h3">Written language of the dictionary</h2>
+        <p>The dictionary volumes were published in the turn of 19th and 20th centuries.
+          This was transition period between Modern Swedish
+          (<em>nysvensk = &quot;new Swedish&quot;</em>) and
+          Contemporary Swedish (<em>nusvensk = &quot;now Swedish&quot;</em>).
+        </p>
+
+        <p>Therefore, the written language of the dictionary may seem old fashioned even outside
+          the parts that are written in Old Swedish
+          (<em>fornsvensk = &quot;ancient Swedish&quot;</em>).
+        </p>
+      </ContentArea>
     </Layout>
   )
 }
