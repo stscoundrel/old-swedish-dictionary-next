@@ -143,6 +143,7 @@ exports[`Footer component Matches snapshot 1`] = `
             className="navColumnItem"
           >
             <a
+              className="link"
               href="/letter/a"
               onClick={[Function]}
               onMouseEnter={[Function]}
@@ -155,6 +156,7 @@ exports[`Footer component Matches snapshot 1`] = `
             className="navColumnItem"
           >
             <a
+              className="link"
               href="/letter/b"
               onClick={[Function]}
               onMouseEnter={[Function]}
