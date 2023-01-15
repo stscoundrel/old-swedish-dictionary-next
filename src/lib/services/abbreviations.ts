@@ -1,4 +1,4 @@
-import { findWorksAndAuthors } from 'old-swedish-dictionary-abbreviations'
+import OSAbbreviations from 'old-swedish-dictionary-abbreviations'
 import { abbreviate } from 'abbreviatrix'
 import { DictionaryEntry } from 'old-swedish-dictionary'
 
@@ -12,7 +12,7 @@ export const getAbbreviations = ({ definitions }: DictionaryEntry): Abbreviation
   const abbreviationSet = new Set()
 
   definitions.forEach((definition) => {
-    const abbreviations = findWorksAndAuthors(definition)
+    const abbreviations = OSAbbreviations.findWorksAndAuthors(definition)
     abbreviations.forEach((explanation, abbreviation) => {
       if (!abbreviationSet.has(abbreviation)) {
         abbreviationSet.add(abbreviation)
@@ -38,4 +38,11 @@ export const addAbbreviationsToContent = (
   })
 
   return result
+}
+
+export const getAllAbbreviations = (): Abbreviation[] => {
+  const abbrs = OSAbbreviations.getWorksAndAuthorsMapping()
+  return Array
+    .from(abbrs, ([abbreviation, explanation]) => ({ explanation, abbreviation }))
+    .sort((a, b) => a.abbreviation.localeCompare(b.abbreviation))
 }
