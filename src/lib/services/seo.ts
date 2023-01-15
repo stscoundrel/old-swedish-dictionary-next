@@ -21,6 +21,11 @@ export const getWordSEO = (word: DictionaryEntry): SEO => ({
   description: `Meaning of Old Swedish word "${word.headword.toLowerCase()}" in Swedish`,
 })
 
+export const getAbbreviationSEO = () : SEO => ({
+  title: 'Old Swedish Dictionary - Sources & Work Cited',
+  description: 'Works and authors cited in K.F Söderwalls dictionary.',
+})
+
 export const getDefaultSEO = () : SEO => ({
   title: 'Old Swedish Dictionary - K.F. Söderwall',
   description: 'Medieval Swedish Dictionary - 40 000+ words and definitions',

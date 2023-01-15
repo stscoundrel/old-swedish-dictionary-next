@@ -3,9 +3,12 @@ import NextHead from 'next/head'
 // Utils.
 import { getDefaultSchema, getLetterSchema, getWordSchema } from 'lib/services/schema'
 import {
+  getAbbreviationSEO,
   getDefaultSEO, getLetterSEO, getWordSEO, SEO,
 } from 'lib/services/seo'
-import { getLetterLink, getMainUrl, getWordLink } from 'lib/utils/links'
+import {
+  getLetterLink, getMainUrl, getSourcesPageLink, getWordLink,
+} from 'lib/utils/links'
 import { ContentType } from 'lib/models/content-types'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
@@ -27,6 +30,10 @@ export default function Head({
 
     if (type === ContentType.Letter && letter) {
       return getLetterLink(letter)
+    }
+
+    if (type === ContentType.SourcesPage) {
+      return getSourcesPageLink()
     }
 
     return getMainUrl()
@@ -51,6 +58,10 @@ export default function Head({
 
     if (type === ContentType.Letter && letter && words) {
       return getLetterSEO(letter, words)
+    }
+
+    if (type === ContentType.SourcesPage) {
+      return getAbbreviationSEO()
     }
 
     return getDefaultSEO()

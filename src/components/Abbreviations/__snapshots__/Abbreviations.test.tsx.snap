@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Abbreviations component Matches the snapshot 1`] = `
+<div
+  className="abbreviations"
+>
+  <div
+    className="column"
+  >
+    <h4>
+      Works and authors cited:
+    </h4>
+    <dl
+      className="wrap"
+    >
+      <dt
+        className="abbreviation"
+      >
+        <strong>
+          GU
+        </strong>
+      </dt>
+      <dd
+        className="explanation"
+      >
+        Glossarii Latino-Svethici specimen vetustum. E cod. mscr. Bibliothecæ Reg. Acad. Upsal. Diss. Ups. præs. J. H. Schröder. 1845.
+      </dd>
+    </dl>
+    <dl
+      className="wrap"
+    >
+      <dt
+        className="abbreviation"
+      >
+        <strong>
+          GU C 20
+        </strong>
+      </dt>
+      <dd
+        className="explanation"
+      >
+        Latinskt-Svenskt glossarium efter Cod. Ups. C 20. Utg. av E. Neuman. S 1--583. 1918--20, (hand 2) s. 1--169. 1938--42. SFSS.
+      </dd>
+    </dl>
+  </div>
+  <a
+    className="link"
+    href="/source-list"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+  >
+    ➞ See all works cited in the dictionary
+  </a>
+</div>
+`;

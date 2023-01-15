@@ -13,11 +13,13 @@ import Button from 'components/Button'
 import { ContentType } from 'lib/models/content-types'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { decodeLetter } from 'lib/utils/slugs'
+import { Abbreviation, getAbbreviations } from 'lib/services/abbreviations'
 
 interface WordPageProps{
     entry: DictionaryEntry,
     letters: AlphabetLetter[],
     letter: AlphabetLetter,
+    abbreviations: Abbreviation[]
 }
 
 interface WordPageParams{
@@ -61,17 +63,21 @@ export async function getStaticProps(
       entry.headword.charAt(0).toLocaleLowerCase(),
     ),
   )[0]
+  const abbreviations = getAbbreviations(entry)
 
   return {
     props: {
       entry,
       letter,
       letters,
+      abbreviations,
     },
   }
 }
 
-export default function Word({ entry, letters, letter }: WordPageProps) {
+export default function Word({
+  entry, letters, letter, abbreviations,
+}: WordPageProps) {
   const router = useRouter()
 
   if (!entry) {
@@ -86,7 +92,7 @@ export default function Word({ entry, letters, letter }: WordPageProps) {
         letters={letters}
         letter={letter}
     >
-      <WordDefinition entry={entry} />
+      <WordDefinition entry={entry} abbreviations={abbreviations}/>
       <Button text="Back" action={() => router.back()} />
     </Layout>
   )
