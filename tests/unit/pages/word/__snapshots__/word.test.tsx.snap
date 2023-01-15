@@ -556,6 +556,33 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           Medieval Runes were used in Sweden from 12th to 17th centuries.
         </small>
       </p>
+      <div
+        className="abbreviations"
+      >
+        <div
+          className="column"
+        >
+          <h4>
+            Works and authors cited:
+          </h4>
+          <dl
+            className="wrap"
+          >
+            <dt
+              className="abbreviation"
+            >
+              <strong>
+                GS
+              </strong>
+            </dt>
+            <dd
+              className="explanation"
+            >
+              Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.
+            </dd>
+          </dl>
+        </div>
+      </div>
     </article>
     <a
       className="button"

@@ -2,6 +2,7 @@ import { capitalize } from 'lib/utils/strings'
 import { lettersToRunes } from 'futhork'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviations'
+import Abbreviations from 'components/Abbreviations'
 import styles from './WordDefinition.module.scss'
 
 interface WordDefinitionProps{
@@ -61,6 +62,7 @@ export default function WordDefinition({ entry, abbreviations }: WordDefinitionP
       <small>Medieval Runes were used in Sweden from 12th to 17th centuries.</small>
       </p>
 
+      <Abbreviations abbreviations={abbreviations} />
     </article>
   )
 }
