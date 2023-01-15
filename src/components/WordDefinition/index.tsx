@@ -1,13 +1,15 @@
 import { capitalize } from 'lib/utils/strings'
 import { lettersToRunes } from 'futhork'
 import { DictionaryEntry } from 'lib/models/dictionary'
+import { Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviations'
 import styles from './WordDefinition.module.scss'
 
 interface WordDefinitionProps{
   entry: DictionaryEntry,
+  abbreviations: Abbreviation[]
 }
 
-export default function WordDefinition({ entry }: WordDefinitionProps) {
+export default function WordDefinition({ entry, abbreviations }: WordDefinitionProps) {
   const {
     headword, partOfSpeech, grammaticalAspect, information, definitions, alternativeForms,
   } = entry
@@ -30,7 +32,10 @@ export default function WordDefinition({ entry }: WordDefinitionProps) {
           <dt><strong>{headword}</strong></dt>
           <dd
             lang="swe"
-          >{definition}</dd>
+            dangerouslySetInnerHTML={{
+              __html: addAbbreviationsToContent(definition, abbreviations),
+            } }
+          />
         </dl>
       ))}
 

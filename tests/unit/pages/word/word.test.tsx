@@ -36,32 +36,39 @@ const letter = {
   slug: 'a',
 }
 
+const abbreviations = [
+  {
+    abbreviation: 'GS',
+    explanation: 'Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.',
+  },
+]
+
 describe('Word page: render & usage', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
     root.render(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
     )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Returns null if entry is unavailable', () => {
     const tree = renderer.create(
-      <Word entry={null} letters={getAlphabet()} letter={letter} />,
+      <Word entry={null} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
     ).toJSON()
     expect(tree).toBeNull()
   })
 
   test('Back button works', async () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} />,
+      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
     )
 
     // Click back btn.
@@ -94,6 +101,7 @@ describe('Word page: data fetching', () => {
         entry,
         letters: getAlphabet(),
         letter,
+        abbreviations,
       },
     }
 

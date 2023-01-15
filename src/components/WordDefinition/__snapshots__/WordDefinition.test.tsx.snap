@@ -38,10 +38,13 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
       </strong>
     </dt>
     <dd
+      dangerouslySetInnerHTML={
+        {
+          "__html": " , vräka. hafwi wald han afköra  <abbr title="Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.">GS</abbr> 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.",
+        }
+      }
       lang="swe"
-    >
-       , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.
-    </dd>
+    />
   </dl>
   <p>
     <strong>
@@ -128,10 +131,13 @@ exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
       </strong>
     </dt>
     <dd
+      dangerouslySetInnerHTML={
+        {
+          "__html": " , vräka. hafwi wald han afköra  <abbr title="Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.">GS</abbr> 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.",
+        }
+      }
       lang="swe"
-    >
-       , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.
-    </dd>
+    />
   </dl>
   <p>
     Possible runic inscription in 
