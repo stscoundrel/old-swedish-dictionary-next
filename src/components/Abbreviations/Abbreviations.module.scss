@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.abbreviations {
+  flex-wrap: wrap;
+}
+
 .abbreviation {
   flex: 1;
   position: relative;
@@ -18,8 +22,13 @@
     top: 0;
   }
 }
+
 .explanation {
   flex: 2;
+}
+
+.link {
+  flex-basis: 100%;
 }
 
 

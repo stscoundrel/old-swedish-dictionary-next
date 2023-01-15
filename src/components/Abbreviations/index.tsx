@@ -1,4 +1,5 @@
 import { Abbreviation } from 'lib/services/abbreviations'
+import Link from 'next/link'
 import styles from './Abbreviations.module.scss'
 
 interface AbbreviationProps{
@@ -21,6 +22,10 @@ export default function Abbreviations({ abbreviations }: AbbreviationProps) {
           ))}
         </div>
       }
+
+      <Link href="/source-list" className={styles.link}>
+       ➞ See all works cited in the dictionary
+      </Link>
     </div>
   )
 }
