@@ -1,4 +1,4 @@
-import { capitalize } from 'lib/utils/strings'
+import { capitalize, getOlderSpelling } from 'lib/utils/strings'
 import { lettersToRunes } from 'futhork'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviations'
@@ -14,6 +14,8 @@ export default function WordDefinition({ entry, abbreviations }: WordDefinitionP
   const {
     headword, partOfSpeech, grammaticalAspect, information, definitions, alternativeForms,
   } = entry
+  const olderForm = getOlderSpelling(headword)
+  const hasOlderForm = headword !== olderForm
 
   return (
     <article className={styles.section}>
@@ -23,14 +25,16 @@ export default function WordDefinition({ entry, abbreviations }: WordDefinitionP
         <small className={styles.subHeading}>
           Old Swedish Dictionary - {headword.toLowerCase()}
         </small>
-        <p>Meaning of Old Swedish word <em>&quot;{headword}&quot;</em> in Swedish.</p>
+        <p>Meaning of Old Swedish word <em>&quot;{headword}&quot;</em>
+        {hasOlderForm && <> (or <em>{olderForm}</em>)</>} in Swedish.</p>
+
         <p>As defined by K.F Söderwall&apos;s dictionary of Medieval Swedish:</p>
       </header>
 
       {definitions.length > 1 && <p><dfn className="capitalize">{headword}</dfn> Old Swedish word can mean:</p>}
       {definitions.map((definition, index) => (
         <dl className={styles.definitionList} key={`definition-${index}`}>
-          <dt><strong>{headword}</strong></dt>
+          <dt><strong>{headword}</strong> {hasOlderForm && <>({olderForm})</>}</dt>
           <dd
             lang="swe"
             dangerouslySetInnerHTML={{
@@ -39,6 +43,12 @@ export default function WordDefinition({ entry, abbreviations }: WordDefinitionP
           />
         </dl>
       ))}
+
+      {hasOlderForm
+        && <p>
+          <strong>Orthography:</strong> Early Old Swedish used different letters for ä and ö,
+          so <em>{headword}</em> may have also been written as <em>{olderForm}</em>
+        </p>}
 
       {partOfSpeech.length > 0 && <p><strong>Part of speech:</strong> <em>{partOfSpeech.join(', ')}</em></p>}
       {information
