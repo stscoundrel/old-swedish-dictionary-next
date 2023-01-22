@@ -518,6 +518,37 @@ exports[`Index page Matches snapshot 1`] = `
         </em>
         ).
       </p>
+      <p>
+        Also, Old Swedish used some letters that are no longer used in modern Swedish. Namely, 
+        <em>
+          æ
+        </em>
+         and 
+        <em>
+          ø
+        </em>
+         were used for modern 
+        <em>
+          ä
+        </em>
+         and 
+        <em>
+          ö
+        </em>
+        , and 
+        <em>
+          þ
+        </em>
+         could be used for both 
+        <em>
+          ð
+        </em>
+         and 
+        <em>
+          th
+        </em>
+         sound. While in Söderwall's dictionary modern ä and ö are always used, this online version will also always provide the alternative older spelling.
+      </p>
     </section>
     <div
       aria-label="Back to top"
