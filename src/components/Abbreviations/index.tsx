@@ -7,6 +7,19 @@ interface AbbreviationProps{
 }
 
 export default function Abbreviations({ abbreviations }: AbbreviationProps) {
+  const shouldShowAllAbbreviationsLink = (): boolean => {
+    if (abbreviations.length > 200) {
+      // Sources index, no need to link to the same page.
+      return false
+    }
+
+    if (abbreviations.length > 0) {
+      return true
+    }
+
+    return false
+  }
+
   return (
     <div className={styles.abbreviations}>
       {abbreviations.length > 0
@@ -23,9 +36,11 @@ export default function Abbreviations({ abbreviations }: AbbreviationProps) {
         </div>
       }
 
-      <Link href="/source-list" className={styles.link}>
+      {shouldShowAllAbbreviationsLink()
+      && <Link href="/source-list" className={styles.link}>
        ➞ See all works cited in the dictionary
       </Link>
+      }
     </div>
   )
 }
