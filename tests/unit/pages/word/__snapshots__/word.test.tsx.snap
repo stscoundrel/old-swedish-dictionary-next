@@ -489,6 +489,11 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
             afköra
             "
           </em>
+           (or 
+          <em>
+            afkøra
+          </em>
+          )
            in Swedish.
         </p>
         <p>
@@ -502,6 +507,10 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           <strong>
             afköra
           </strong>
+           
+          (
+          afkøra
+          )
         </dt>
         <dd
           dangerouslySetInnerHTML={
@@ -512,6 +521,19 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           lang="swe"
         />
       </dl>
+      <p>
+        <strong>
+          Orthography:
+        </strong>
+         Early Old Swedish used different letters for ä and ö, so 
+        <em>
+          afköra
+        </em>
+         may have also been written as 
+        <em>
+          afkøra
+        </em>
+      </p>
       <p>
         <strong>
           Part of speech:

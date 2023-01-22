@@ -23,6 +23,11 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
         afköra
         "
       </em>
+       (or 
+      <em>
+        afkøra
+      </em>
+      )
        in Swedish.
     </p>
     <p>
@@ -36,6 +41,10 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
       <strong>
         afköra
       </strong>
+       
+      (
+      afkøra
+      )
     </dt>
     <dd
       dangerouslySetInnerHTML={
@@ -46,6 +55,19 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
       lang="swe"
     />
   </dl>
+  <p>
+    <strong>
+      Orthography:
+    </strong>
+     Early Old Swedish used different letters for ä and ö, so 
+    <em>
+      afköra
+    </em>
+     may have also been written as 
+    <em>
+      afkøra
+    </em>
+  </p>
   <p>
     <strong>
       Part of speech:
@@ -137,19 +159,19 @@ exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
     <h1
       lang="non-swe"
     >
-      Afköra
+      Afkora
     </h1>
     <small
       className="subHeading"
     >
       Old Swedish Dictionary - 
-      afköra
+      afkora
     </small>
     <p>
       Meaning of Old Swedish word 
       <em>
         "
-        afköra
+        afkora
         "
       </em>
        in Swedish.
@@ -163,8 +185,9 @@ exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
   >
     <dt>
       <strong>
-        afköra
+        afkora
       </strong>
+       
     </dt>
     <dd
       dangerouslySetInnerHTML={
@@ -184,7 +207,7 @@ exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
     <span
       className="rune"
     >
-      ᛆᚠᚴᚯᚱᛆ
+      ᛆᚠᚴᚮᚱᛆ
     </span>
     <br />
     <small>

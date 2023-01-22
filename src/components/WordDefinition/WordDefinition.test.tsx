@@ -17,7 +17,7 @@ const entry: DictionaryEntry = {
 
 // Optional fields artificially removed.
 const minimalEntry: DictionaryEntry = {
-  headword: 'afköra',
+  headword: 'afkora', // purposefully removing ö to produce no alternative spelling forms.
   definitions: [
     ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
   ],
@@ -77,6 +77,6 @@ describe('WordDefinition component -> minimal entry', () => {
     )
     const { root } = tree
 
-    expect(root.findByType('h1').children).toEqual(['Afköra'])
+    expect(root.findByType('h1').children).toEqual(['Afkora'])
   })
 })
