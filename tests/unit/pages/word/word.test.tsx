@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import Word, { getStaticProps, getStaticPaths } from 'pages/word/[word]'
 import renderer from 'react-test-renderer'
 import { getAlphabet } from 'lib/services/dictionary'
+import { Crosslink, DictionarySource } from 'scandinavian-dictionary-crosslinker'
 
 const mockHandler = jest.fn()
 
@@ -43,32 +44,71 @@ const abbreviations = [
   },
 ]
 
+const crosslinks: Crosslink[] = [
+  {
+    url: 'https://cleasby-vigfusson-dictionary.vercel.app/word/fadir',
+    source: DictionarySource.OldNorse,
+  },
+  {
+    url: 'https://old-icelandic.vercel.app/word/fadir',
+    source: DictionarySource.OldIcelandic,
+  },
+  {
+    url: 'https://old-norwegian-dictionary.vercel.app/word/fadir',
+    source: DictionarySource.OldNorwegian,
+  },
+]
+
 describe('Word page: render & usage', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
     root.render(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
+      <Word
+        entry={entry}
+        letters={getAlphabet()}
+        letter={letter}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
+      <Word
+        entry={entry}
+        letters={getAlphabet()}
+        letter={letter}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Returns null if entry is unavailable', () => {
     const tree = renderer.create(
-      <Word entry={null} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
+      <Word
+        entry={null}
+        letters={getAlphabet()}
+        letter={letter}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     ).toJSON()
     expect(tree).toBeNull()
   })
 
   test('Back button works', async () => {
     const tree = renderer.create(
-      <Word entry={entry} letters={getAlphabet()} letter={letter} abbreviations={abbreviations} />,
+      <Word
+      entry={entry}
+      letters={getAlphabet()}
+      letter={letter}
+      abbreviations={abbreviations}
+      crosslinks={crosslinks}
+    />,
     )
 
     // Click back btn.
@@ -102,6 +142,7 @@ describe('Word page: data fetching', () => {
         letters: getAlphabet(),
         letter,
         abbreviations,
+        crosslinks: [],
       },
     }
 

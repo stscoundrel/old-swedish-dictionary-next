@@ -14,12 +14,15 @@ import { ContentType } from 'lib/models/content-types'
 import { DictionaryEntry } from 'lib/models/dictionary'
 import { decodeLetter } from 'lib/utils/slugs'
 import { Abbreviation, getAbbreviations } from 'lib/services/abbreviations'
+import { Crosslink } from 'scandinavian-dictionary-crosslinker'
+import { getCrossLinks } from 'lib/services/crosslinks'
 
 interface WordPageProps{
     entry: DictionaryEntry,
     letters: AlphabetLetter[],
     letter: AlphabetLetter,
-    abbreviations: Abbreviation[]
+    abbreviations: Abbreviation[],
+    crosslinks: Crosslink[],
 }
 
 interface WordPageParams{
@@ -64,6 +67,7 @@ export async function getStaticProps(
     ),
   )[0]
   const abbreviations = getAbbreviations(entry)
+  const crosslinks = getCrossLinks(entry)
 
   return {
     props: {
@@ -71,12 +75,13 @@ export async function getStaticProps(
       letter,
       letters,
       abbreviations,
+      crosslinks,
     },
   }
 }
 
 export default function Word({
-  entry, letters, letter, abbreviations,
+  entry, letters, letter, abbreviations, crosslinks,
 }: WordPageProps) {
   const router = useRouter()
 
@@ -92,7 +97,7 @@ export default function Word({
         letters={letters}
         letter={letter}
     >
-      <WordDefinition entry={entry} abbreviations={abbreviations}/>
+      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks} />
       <Button text="Back" action={() => router.back()} />
     </Layout>
   )
