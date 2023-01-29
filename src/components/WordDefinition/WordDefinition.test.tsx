@@ -1,6 +1,7 @@
 import { DictionaryEntry } from 'lib/models/dictionary'
 import ReactDOM from 'react-dom/client'
 import renderer from 'react-test-renderer'
+import { Crosslink, DictionarySource } from 'scandinavian-dictionary-crosslinker'
 import WordDefinition from './index'
 
 const entry: DictionaryEntry = {
@@ -17,7 +18,7 @@ const entry: DictionaryEntry = {
 
 // Optional fields artificially removed.
 const minimalEntry: DictionaryEntry = {
-  headword: 'afköra',
+  headword: 'afkora', // purposefully removing ö to produce no alternative spelling forms.
   definitions: [
     ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
   ],
@@ -35,22 +36,41 @@ const abbreviations = [
   },
 ]
 
+const crosslinks: Crosslink[] = [
+  {
+    url: 'https://cleasby-vigfusson-dictionary.vercel.app/word/fadir',
+    source: DictionarySource.OldNorse,
+  },
+  {
+    url: 'https://old-icelandic.vercel.app/word/fadir',
+    source: DictionarySource.OldIcelandic,
+  },
+  {
+    url: 'https://old-norwegian-dictionary.vercel.app/word/fadir',
+    source: DictionarySource.OldNorwegian,
+  },
+]
+
 describe('WordDefinition component -> full entry', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
-    root.render(<WordDefinition entry={entry} abbreviations={abbreviations} />)
+    root.render(
+      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+    )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <WordDefinition entry={entry} abbreviations={abbreviations} />,
+      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
-    const tree = renderer.create(<WordDefinition entry={entry} abbreviations={abbreviations} />)
+    const tree = renderer.create(
+      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+    )
     const { root } = tree
 
     expect(root.findByType('h1').children).toEqual(['Afköra'])
@@ -61,22 +81,24 @@ describe('WordDefinition component -> minimal entry', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
-    root.render(<WordDefinition entry={minimalEntry} abbreviations={abbreviations} />)
+    root.render(
+      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+    )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} />,
+      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
     const tree = renderer.create(
-      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} />,
+      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
     )
     const { root } = tree
 
-    expect(root.findByType('h1').children).toEqual(['Afköra'])
+    expect(root.findByType('h1').children).toEqual(['Afkora'])
   })
 })
