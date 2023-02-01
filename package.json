@@ -35,7 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reset-css": "^5.0.1",
-    "sass": "^1.57.1",
+    "sass": "^1.58.0",
     "scandinavian-dictionary-crosslinker": "^0.2.2",
     "sharp": "^0.31.3",
     "sitemap": "^7.1.1",
