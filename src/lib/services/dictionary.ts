@@ -59,6 +59,9 @@ export const getWord = (word: string): DictionaryEntry => (
   getAllWords().filter((entry) => entry.slug === word)[0]
 )
 
+export const getSimilarWords = (entry: DictionaryEntry) : DictionaryEntry[] => getAllWords()
+  .filter((dEntry) => dEntry.headword === entry.headword && dEntry.slug !== entry.slug)
+
 export const getAlphabet = (): AlphabetLetter[] => {
   // Outputted from dictionary src with scripts/output-alphabet.js
   const letters = [

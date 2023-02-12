@@ -5,15 +5,19 @@ import { Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviati
 import Abbreviations from 'components/Abbreviations'
 import { Crosslink } from 'scandinavian-dictionary-crosslinker'
 import Crosslinks from 'components/Crosslinks'
+import SimilarEntries from 'components/SimilarEntries'
 import styles from './WordDefinition.module.scss'
 
 interface WordDefinitionProps{
   entry: DictionaryEntry,
+  similarEntries: DictionaryEntry[],
   abbreviations: Abbreviation[],
   crosslinks: Crosslink[],
 }
 
-export default function WordDefinition({ entry, abbreviations, crosslinks }: WordDefinitionProps) {
+export default function WordDefinition({
+  entry, similarEntries, abbreviations, crosslinks,
+}: WordDefinitionProps) {
   const {
     headword, partOfSpeech, grammaticalAspect, information, definitions, alternativeForms,
   } = entry
@@ -75,6 +79,7 @@ export default function WordDefinition({ entry, abbreviations, crosslinks }: Wor
       <small>Medieval Runes were used in Sweden from 12th to 17th centuries.</small>
       </p>
 
+      <SimilarEntries entries={similarEntries} />
       <Abbreviations abbreviations={abbreviations} />
       <br />
       <Crosslinks crosslinks={crosslinks} />
