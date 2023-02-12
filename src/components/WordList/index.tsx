@@ -11,7 +11,7 @@ export default function WordList({ words }: WordListProps) {
     <ul className={styles.list}>
       { words.map((word) => (
         <li key={word.slug}>
-          <WordLink data={word} />
+          <WordLink data={word} useLowerCase={true} />
         </li>
       )) }
     </ul>
