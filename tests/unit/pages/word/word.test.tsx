@@ -66,6 +66,7 @@ describe('Word page: render & usage', () => {
     root.render(
       <Word
         entry={entry}
+        similarEntries={[]}
         letters={getAlphabet()}
         letter={letter}
         abbreviations={abbreviations}
@@ -78,6 +79,7 @@ describe('Word page: render & usage', () => {
     const tree = renderer.create(
       <Word
         entry={entry}
+        similarEntries={[]}
         letters={getAlphabet()}
         letter={letter}
         abbreviations={abbreviations}
@@ -91,6 +93,7 @@ describe('Word page: render & usage', () => {
     const tree = renderer.create(
       <Word
         entry={null}
+        similarEntries={[]}
         letters={getAlphabet()}
         letter={letter}
         abbreviations={abbreviations}
@@ -104,6 +107,7 @@ describe('Word page: render & usage', () => {
     const tree = renderer.create(
       <Word
       entry={entry}
+      similarEntries={[]}
       letters={getAlphabet()}
       letter={letter}
       abbreviations={abbreviations}
@@ -139,6 +143,7 @@ describe('Word page: data fetching', () => {
     const expected = {
       props: {
         entry,
+        similarEntries: [],
         letters: getAlphabet(),
         letter,
         abbreviations,
@@ -149,6 +154,25 @@ describe('Word page: data fetching', () => {
     const result = await getStaticProps({ params: { word: 'afkora' } })
 
     expect(result).toEqual(expected)
+  })
+
+  test('getStaticProps finds similar entries based on slug', async () => {
+    const expected = [
+      {
+        headword: 'fosterfadhir',
+        partOfSpeech: ['nn'],
+        grammaticalAspect: '',
+        information: '',
+        definitions: [
+          ' L: fosterfader, försörjare. jhesus war thera fosteradher til thera lifs bärningh  MP 4: 29 .',
+        ],
+        alternativeForms: ['fooster- GU C 20 s. 367) , '],
+        slug: 'fosterfadhir-2',
+      },
+    ]
+
+    const result = await getStaticProps({ params: { word: 'fosterfadhir' } })
+    expect(result.props.similarEntries).toEqual(expected)
   })
 
   test('getStaticProps returns 404 redirect for unkown words', async () => {

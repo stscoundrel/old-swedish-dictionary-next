@@ -60,9 +60,6 @@ export default function SearchForm() {
         })}`)
         const apiSearchResult = await apiSearchResponse.json()
 
-        console.log(apiSearchResponse)
-        console.log(apiSearchResult)
-
         setResults(apiSearchResult)
         hideSpinner()
       }
