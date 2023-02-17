@@ -6,6 +6,7 @@ import Layout from 'components/Layout'
 import ContentArea from 'components/ContentArea'
 import { ContentType } from 'lib/models/content-types'
 import Link from 'next/link'
+import SampleText from 'components/SampleText'
 
 interface IndexProps{
   letters: AlphabetLetter[]
@@ -50,6 +51,8 @@ export default function Index({ letters }: IndexProps) {
           Germanic three-gender system. Nouns, adjectives, pronouns and certain numerals
           were inflected in four cases.
         </p>
+
+        <SampleText />
       </ContentArea>
 
       <ContentArea>

@@ -491,6 +491,204 @@ exports[`Index page Matches snapshot 1`] = `
       <p>
         Early Old Swedish was markedly different from modern Sweden: it had a more complex case structure and also still had the original Germanic three-gender system. Nouns, adjectives, pronouns and certain numerals were inflected in four cases.
       </p>
+      <p
+        className="h4"
+      >
+        A sample of Old Swedish, early 13th century, from Westrogothic law:
+      </p>
+      <p>
+        <em>
+          <a
+            href="/word/drapare"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Dræpær
+          </a>
+           
+          <a
+            href="/word/mather"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            maþar
+          </a>
+          <a
+            href="/word/svansker-2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+             svænskan man
+          </a>
+           eller 
+          <a
+            href="/word/smalandinge-2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            smalenskæn
+          </a>
+          , 
+          <a
+            href="/word/innan"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            innan
+          </a>
+           konongsrikis 
+          <a
+            href="/word/man"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            man
+          </a>
+          , eigh 
+          <a
+            href="/word/vastgotska"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            væstgøskan
+          </a>
+          , bøte firi 
+          <a
+            href="/word/atta"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            atta
+          </a>
+           
+          <a
+            href="/word/ortogh-3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            ørtogher
+          </a>
+           ok þrettan markær ok ænga ætar 
+          <a
+            href="/word/bot"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            bot
+          </a>
+          . 
+          <a
+            href="/word/drapare"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Dræpar
+          </a>
+           
+          <a
+            href="/word/mather"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            maþær
+          </a>
+           
+          <a
+            href="/word/dansker-2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            danskan man
+          </a>
+           allæ 
+          <a
+            href="/word/norisker"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            noræn man
+          </a>
+          , bøte niv markum. 
+          <a
+            href="/word/drapare"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Dræpær
+          </a>
+           
+          <a
+            href="/word/mather"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            maþær
+          </a>
+           
+          <a
+            href="/word/utlandsker"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            vtlænskan man
+          </a>
+          , eigh ma frid 
+          <a
+            href="/word/flyia"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            flyia
+          </a>
+           or 
+          <a
+            href="/word/land"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            landi
+          </a>
+           sinu oc j æth 
+          <a
+            href="/word/han-2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            hans
+          </a>
+          .
+        </em>
+      </p>
+      <hr />
+      <p>
+        Translates to English as:
+      </p>
+      <p>
+        <em>
+          If someone slays a Swede or a Smålander, a man from the kingdom, but not a West Geat, he will pay eight örtugar and thirteen marks, but no wergild. If someone slays a Dane or a Norwegian, he will pay nine marks. If someone slays a foreigner, he shall not be banished and have to flee to his clan.
+        </em>
+      </p>
+      <hr />
     </section>
     <section
       className="section"
@@ -581,9 +779,11 @@ exports[`Index page Matches snapshot 1`] = `
       <section
         className="section"
       >
-        <h4>
+        <h3
+          className="h4"
+        >
           Old Swedish language
-        </h4>
+        </h3>
         <p>
           Old Swedish developed from Old East Norse, the eastern dialect of Old Norse, at the end of the Viking Age.
         </p>

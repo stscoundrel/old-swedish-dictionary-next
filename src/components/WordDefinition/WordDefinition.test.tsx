@@ -56,20 +56,35 @@ describe('WordDefinition component -> full entry', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
     root.render(
-      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={entry}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+        similarEntries={[entry]}
+      />,
     )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={entry}
+        similarEntries={[entry]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
     const tree = renderer.create(
-      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={entry}
+        similarEntries={[entry]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     )
     const { root } = tree
 
@@ -82,20 +97,35 @@ describe('WordDefinition component -> minimal entry', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
     root.render(
-      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={minimalEntry}
+        similarEntries={[]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     )
   })
 
   test('Matches snapshot', () => {
     const tree = renderer.create(
-      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={minimalEntry}
+        similarEntries={[]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
     const tree = renderer.create(
-      <WordDefinition entry={minimalEntry} abbreviations={abbreviations} crosslinks={crosslinks}/>,
+      <WordDefinition
+        entry={minimalEntry}
+        similarEntries={[]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />,
     )
     const { root } = tree
 

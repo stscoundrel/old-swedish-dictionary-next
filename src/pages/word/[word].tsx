@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router'
 
 // Services.
-import { getWord, getAlphabet, AlphabetLetter } from 'lib/services/dictionary'
+import {
+  getWord, getAlphabet, AlphabetLetter, getSimilarWords,
+} from 'lib/services/dictionary'
 
 // Utils.
 import { Redirect404ResponseSchema, redirect404 } from 'lib/utils/redirect-404'
@@ -19,6 +21,7 @@ import { getCrossLinks } from 'lib/services/crosslinks'
 
 interface WordPageProps{
     entry: DictionaryEntry,
+    similarEntries: DictionaryEntry[],
     letters: AlphabetLetter[],
     letter: AlphabetLetter,
     abbreviations: Abbreviation[],
@@ -60,6 +63,7 @@ export async function getStaticProps(
     return redirect404()
   }
 
+  const similarEntries = getSimilarWords(entry)
   const letters = getAlphabet()
   const letter = letters.filter(
     (alphabetLetter) => alphabetLetter.letter === decodeLetter(
@@ -72,6 +76,7 @@ export async function getStaticProps(
   return {
     props: {
       entry,
+      similarEntries,
       letter,
       letters,
       abbreviations,
@@ -81,7 +86,7 @@ export async function getStaticProps(
 }
 
 export default function Word({
-  entry, letters, letter, abbreviations, crosslinks,
+  entry, similarEntries = [], letters, letter, abbreviations, crosslinks,
 }: WordPageProps) {
   const router = useRouter()
 
@@ -97,7 +102,12 @@ export default function Word({
         letters={letters}
         letter={letter}
     >
-      <WordDefinition entry={entry} abbreviations={abbreviations} crosslinks={crosslinks} />
+      <WordDefinition
+        entry={entry}
+        similarEntries={similarEntries}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+      />
       <Button text="Back" action={() => router.back()} />
     </Layout>
   )
