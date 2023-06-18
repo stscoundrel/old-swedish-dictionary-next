@@ -1,6 +1,6 @@
 import { joinWithConj } from 'teljari'
 import { capitalize } from 'lib/utils/strings'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
 
 export interface SEO {
@@ -8,7 +8,10 @@ export interface SEO {
   description: string
 }
 
-export const getLetterSEO = (alphabetLetter: AlphabetLetter, content: DictionaryEntry[]): SEO => {
+export const getLetterSEO = (
+  alphabetLetter: AlphabetLetter,
+  content: DictionaryEntry[] | DictionaryEntryDTO[],
+): SEO => {
   const firstWords = content.slice(0, 4).map((entry) => entry.headword.toLowerCase())
   return {
     title: `Old Swedish words starting with letter ${alphabetLetter.letter.toUpperCase()}`,

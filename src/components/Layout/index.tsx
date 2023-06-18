@@ -5,13 +5,13 @@ import Breadcrumbs from 'components/Breadcrumbs'
 import Navigation from 'components/Navigation'
 import BackToTop from 'components/BackToTop'
 import { ContentType } from 'lib/models/content-types'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
 
 interface LayoutProps{
   type: ContentType,
   word: DictionaryEntry | null,
-  words: DictionaryEntry[],
+  words: DictionaryEntry[] | DictionaryEntryDTO[],
   letters: AlphabetLetter[],
   letter: AlphabetLetter | null,
   children: JSX.Element | JSX.Element[],

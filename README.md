@@ -10,6 +10,7 @@ See live site [here](https://old-swedish-dictionary.vercel.app)
 - Old Swedish to Swedish translations
 - 40 000+ statically generated pages
 - Search words & definitions.
+- Automatic crosslinks to headwords in related dictionaries.
 - High test coverage (unit + integration)
 - Optimized for fast load times (PWA)
 - SEO, Accessibility and Schema optimized
