@@ -1,6 +1,6 @@
 import { getDictionary } from 'old-swedish-dictionary'
 import { slugifyWord, slugifyLetter } from '../utils/slugs'
-import { OriginalDictionaryEntry, DictionaryEntry } from '../models/dictionary'
+import { OriginalDictionaryEntry, DictionaryEntry, DictionaryEntryDTO } from '../models/dictionary'
 
 let cachedDictionary: DictionaryEntry[] | null = null
 
@@ -47,10 +47,12 @@ export const getAllWords = (): DictionaryEntry[] => {
   return formattedWords
 }
 
-export const getByLetter = (letter: string): DictionaryEntry[] => {
+export const getByLetter = (letter: string): DictionaryEntryDTO[] => {
   const words = getAllWords()
-  const byLetter = words.filter((entry) => (
-    entry.headword.charAt(0).toLowerCase() === letter.toLowerCase()))
+  const byLetter = words
+    .filter((entry) => (
+      entry.headword.charAt(0).toLowerCase() === letter.toLowerCase()))
+    .map((entry) => ({ headword: entry.headword, slug: entry.slug }))
 
   return byLetter
 }

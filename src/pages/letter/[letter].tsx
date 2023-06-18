@@ -6,7 +6,7 @@ import { decodeLetter } from 'lib/utils/slugs'
 import Layout from 'components/Layout'
 import LetterHeader from 'components/LetterHeader'
 import WordList from 'components/WordList'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntryDTO } from 'lib/models/dictionary'
 import { ContentType } from 'lib/models/content-types'
 
 interface LetterPath{
@@ -21,7 +21,7 @@ interface LetterPageStaticPaths{
 }
 
 interface LetterPageProps{
-    words: DictionaryEntry[],
+    words: DictionaryEntryDTO[],
     letters: AlphabetLetter[],
     letter: AlphabetLetter
 }

@@ -1,7 +1,7 @@
 import { capitalize } from 'lib/utils/strings'
 import { slugifyLetter } from 'lib/utils/slugs'
 import { getWordLink, getLetterLink } from 'lib/utils/links'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import { Breadcrumb } from 'lib/utils/breadcrumbs'
 
 interface SchemaListItem {
@@ -21,7 +21,9 @@ interface SchemaDefinition {
   inDefinedTermSet?: string,
 }
 
-const getDefinedTermSetData = (content: DictionaryEntry[]): SchemaDefinition => {
+const getDefinedTermSetData = (
+  content: DictionaryEntry[] | DictionaryEntryDTO[],
+): SchemaDefinition => {
   const letter = {
     letter: content[0].headword.charAt(0),
     slug: slugifyLetter(content[0].headword.charAt(0)),
@@ -79,7 +81,7 @@ export const getWordSchema = (entry: DictionaryEntry): string => {
   return JSON.stringify(schema)
 }
 
-export const getLetterSchema = (entries: DictionaryEntry[]): string => {
+export const getLetterSchema = (entries: DictionaryEntry[] | DictionaryEntryDTO[]): string => {
   const schema = getDefinedTermSetData(entries)
   return JSON.stringify(schema)
 }

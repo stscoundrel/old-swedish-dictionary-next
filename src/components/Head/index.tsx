@@ -10,13 +10,13 @@ import {
   getLetterLink, getMainUrl, getSourcesPageLink, getWordLink,
 } from 'lib/utils/links'
 import { ContentType } from 'lib/models/content-types'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
 
 interface HeadProps{
   type: ContentType,
   word: DictionaryEntry | null,
-  words: DictionaryEntry[]
+  words: DictionaryEntry[] | DictionaryEntryDTO[]
   letter: AlphabetLetter | null,
 }
 
@@ -41,7 +41,10 @@ export default function Head({
 
   const getSchema = (): string => {
     if (type === ContentType.Word && word) {
-      return getWordSchema(word)
+      // In this branch we're always dealing with DictionaryEntry.
+      // TypeScript cant easily deduct this, so let's help it.
+      const entry: DictionaryEntry = word as DictionaryEntry
+      return getWordSchema(entry)
     }
 
     if (type === ContentType.Letter && words) {
@@ -53,7 +56,10 @@ export default function Head({
 
   const getSeo = (): SEO => {
     if (type === ContentType.Word && word) {
-      return getWordSEO(word)
+      // In this branch we're always dealing with DictionaryEntry.
+      // TypeScript cant easily deduct this, so let's help it.
+      const entry: DictionaryEntry = word as DictionaryEntry
+      return getWordSEO(entry)
     }
 
     if (type === ContentType.Letter && letter && words) {

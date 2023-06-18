@@ -1,9 +1,9 @@
 import WordLink from 'components/WordLink'
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import styles from './WordList.module.scss'
 
 interface WordListProps{
-  words: DictionaryEntry[]
+  words: DictionaryEntry[] | DictionaryEntryDTO[]
 }
 
 export default function WordList({ words }: WordListProps) {

@@ -1,9 +1,9 @@
-import { DictionaryEntry } from 'lib/models/dictionary'
+import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import Link from 'next/link'
 import styles from './WordLink.module.scss'
 
 interface WordLinkProps{
-  data: DictionaryEntry,
+  data: DictionaryEntry | DictionaryEntryDTO,
   useLowerCase: boolean,
 }
 
