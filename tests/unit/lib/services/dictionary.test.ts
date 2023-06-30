@@ -63,7 +63,7 @@ describe('Dictionary tests', () => {
       grammaticalAspect: 'v.',
       information: '',
       definitions: [
-        ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+        ', vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
       alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
@@ -75,7 +75,7 @@ describe('Dictionary tests', () => {
       grammaticalAspect: '',
       information: '',
       definitions: [
-        'geneaogia idest generacio släkt ok släkträknan  GU C 20 s. 309 .',
+        'geneaogia idest generacio släkt ok släkträknan  GU C 20 s. 309.',
       ],
       alternativeForms: [],
       slug: 'slaktraknan',

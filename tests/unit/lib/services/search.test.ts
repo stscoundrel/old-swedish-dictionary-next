@@ -10,7 +10,7 @@ describe('Search tests', () => {
     const expected = {
       headword: 'afköra',
       slug: 'afkora',
-      foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
+      foundIn: [', vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
     }
 
     expect(result[0]).toEqual(expected)
