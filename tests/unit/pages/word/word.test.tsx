@@ -26,7 +26,7 @@ const entry = {
   grammaticalAspect: 'v.',
   information: '',
   definitions: [
-    ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+    ', vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
   ],
   alternativeForms: ['-bortdrifva'],
   slug: 'afkora',
@@ -164,9 +164,9 @@ describe('Word page: data fetching', () => {
         grammaticalAspect: '',
         information: '',
         definitions: [
-          ' L: fosterfader, försörjare. jhesus war thera fosteradher til thera lifs bärningh  MP 4: 29 .',
+          'L: fosterfader, försörjare. jhesus war thera fosteradher til thera lifs bärningh  MP 4: 29.',
         ],
-        alternativeForms: ['fooster- GU C 20 s. 367) , '],
+        alternativeForms: ['fooster- GU C 20 s. 367) ,'],
         slug: 'fosterfadhir-2',
       },
     ]
