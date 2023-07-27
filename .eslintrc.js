@@ -21,7 +21,6 @@ module.exports = {
   plugins: [
     'import',
     'react',
-    'react-hooks',
     'jest',
     'cypress',
     '@typescript-eslint',
