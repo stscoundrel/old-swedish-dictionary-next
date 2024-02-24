@@ -638,6 +638,15 @@ exports[`Search page: render Matches snapshot 1`] = `
           <ul>
             <li>
               <a
+                href="https://old-danish-dictionary.vercel.app/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Otto Kalkar's Old Danish Dictionary
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://old-norwegian-dictionary.vercel.app/"
                 rel="noopener noreferrer"
                 target="_blank"

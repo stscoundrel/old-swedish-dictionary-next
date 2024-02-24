@@ -572,6 +572,15 @@ exports[`Layout component Letter layout Matches snapshot 1`] = `
           <ul>
             <li>
               <a
+                href="https://old-danish-dictionary.vercel.app/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Otto Kalkar's Old Danish Dictionary
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://old-norwegian-dictionary.vercel.app/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1530,6 +1539,15 @@ exports[`Layout component Word layout Matches snapshot 1`] = `
             Related dictionary projects
           </h4>
           <ul>
+            <li>
+              <a
+                href="https://old-danish-dictionary.vercel.app/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Otto Kalkar's Old Danish Dictionary
+              </a>
+            </li>
             <li>
               <a
                 href="https://old-norwegian-dictionary.vercel.app/"

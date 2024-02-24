@@ -18,7 +18,7 @@ const entry1: DictionaryEntry = {
   slug: 'aremark',
 }
 
-// Dummy entry which produces cross links
+// Dummy entry which produces crosslinks
 const entry2: DictionaryEntry = {
   headword: '',
   partOfSpeech: [''],
@@ -39,16 +39,16 @@ describe('Crosslinks service tests', () => {
   test('Returns crosslinks when slugs match', () => {
     const expected = [
       {
-        url: 'https://old-norwegian-dictionary.vercel.app/word/fadir',
-        source: 'old-norwegian',
-      },
-      {
         url: 'https://cleasby-vigfusson-dictionary.vercel.app/word/fadir',
         source: 'old-norse',
       },
       {
         url: 'https://old-icelandic.vercel.app/word/fadir',
         source: 'old-icelandic',
+      },
+      {
+        url: 'https://old-norwegian-dictionary.vercel.app/word/fadir',
+        source: 'old-norwegian',
       },
     ]
 
