@@ -74,6 +74,12 @@ export default function Footer({ letters }: FooterProps) {
           <nav className={styles.nav}>
             <h4 className={styles.navTitle}>Related dictionary projects</h4>
             <ul>
+            <li>
+                <ExternalLink
+                  title="Otto Kalkar's Old Danish Dictionary"
+                  href="https://old-danish-dictionary.vercel.app/"
+                />
+              </li>
               <li>
                 <ExternalLink
                   title="Dictionary of the Old Norwegian Language"
