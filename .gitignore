@@ -49,3 +49,4 @@ public/workbox-*.js
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+/tests/integration/oldswedishdictionarye2e/.idea
