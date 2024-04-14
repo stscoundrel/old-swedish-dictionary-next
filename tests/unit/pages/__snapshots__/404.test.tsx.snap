@@ -405,6 +405,7 @@ exports[`404 page page Matches snapshot 1`] = `
           <input
             aria-label="Search"
             className="input"
+            data-testid="searchbar-input"
             name="search"
             onChange={[Function]}
             type="search"
@@ -412,6 +413,7 @@ exports[`404 page page Matches snapshot 1`] = `
           />
           <button
             className="button button--secondary button--no-margs"
+            data-testid="searchbar-submit"
             name="submit"
             type="submit"
           >
