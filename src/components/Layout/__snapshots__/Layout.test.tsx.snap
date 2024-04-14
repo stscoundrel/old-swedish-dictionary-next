@@ -405,6 +405,7 @@ exports[`Layout component Letter layout Matches snapshot 1`] = `
           <input
             aria-label="Search"
             className="input"
+            data-testid="searchbar-input"
             name="search"
             onChange={[Function]}
             type="search"
@@ -412,6 +413,7 @@ exports[`Layout component Letter layout Matches snapshot 1`] = `
           />
           <button
             className="button button--secondary button--no-margs"
+            data-testid="searchbar-submit"
             name="submit"
             type="submit"
           >
@@ -1383,6 +1385,7 @@ exports[`Layout component Word layout Matches snapshot 1`] = `
           <input
             aria-label="Search"
             className="input"
+            data-testid="searchbar-input"
             name="search"
             onChange={[Function]}
             type="search"
@@ -1390,6 +1393,7 @@ exports[`Layout component Word layout Matches snapshot 1`] = `
           />
           <button
             className="button button--secondary button--no-margs"
+            data-testid="searchbar-submit"
             name="submit"
             type="submit"
           >
