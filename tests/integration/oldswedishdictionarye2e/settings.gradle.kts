@@ -1,3 +1,3 @@
 
-rootProject.name = "olddanishdictionarye2e"
+rootProject.name = "oldswedishdictionarye2e"
 
