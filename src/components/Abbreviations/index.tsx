@@ -37,7 +37,7 @@ export default function Abbreviations({ abbreviations }: AbbreviationProps) {
       }
 
       {shouldShowAllAbbreviationsLink()
-      && <Link href="/source-list" className={styles.link}>
+      && <Link href="/source-list" className={styles.link} prefetch={false}>
        ➞ See all works cited in the dictionary
       </Link>
       }

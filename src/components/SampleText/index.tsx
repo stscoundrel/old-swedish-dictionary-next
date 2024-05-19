@@ -8,12 +8,12 @@ export default function SampleText() {
       </p>
       <p>
         <em>
-          <Link href="/word/drapare">Dræpær</Link> <Link href="/word/mather">maþar</Link><Link href="/word/svansker-2"> svænskan man</Link> eller <Link href="/word/smalandinge-2">smalenskæn</Link>, <Link href="/word/innan">innan</Link> konongsrikis <Link href="/word/man">man</Link>,
-          eigh <Link href="/word/vastgotska">væstgøskan</Link>, bøte firi <Link href="/word/atta">atta</Link> <Link href="/word/ortogh-3">ørtogher</Link> ok þrettan markær
-          ok ænga ætar <Link href="/word/bot">bot</Link>. <Link href="/word/drapare">Dræpar</Link> <Link href="/word/mather">maþær</Link> <Link href="/word/dansker-2">danskan
-          man</Link> allæ <Link href="/word/norisker">noræn man</Link>,
-          bøte niv markum. <Link href="/word/drapare">Dræpær</Link> <Link href="/word/mather">maþær</Link> <Link href="/word/utlandsker">vtlænskan man</Link>,
-          eigh ma frid <Link href="/word/flyia">flyia</Link> or <Link href="/word/land">landi</Link> sinu oc j æth <Link href="/word/han-2">hans</Link>.
+          <Link href="/word/drapare" prefetch={false}>Dræpær</Link> <Link href="/word/mather" prefetch={false}>maþar</Link><Link href="/word/svansker-2" prefetch={false}> svænskan man</Link> eller <Link href="/word/smalandinge-2" prefetch={false}>smalenskæn</Link>, <Link href="/word/innan" prefetch={false}>innan</Link> konongsrikis <Link href="/word/man" prefetch={false}>man</Link>,
+          eigh <Link href="/word/vastgotska" prefetch={false}>væstgøskan</Link>, bøte firi <Link href="/word/atta" prefetch={false}>atta</Link> <Link href="/word/ortogh-3" prefetch={false}>ørtogher</Link> ok þrettan markær
+          ok ænga ætar <Link href="/word/bot" prefetch={false}>bot</Link>. <Link href="/word/drapare" prefetch={false}>Dræpar</Link> <Link href="/word/mather" prefetch={false}>maþær</Link> <Link href="/word/dansker-2" prefetch={false}>danskan
+          man</Link> allæ <Link href="/word/norisker" prefetch={false}>noræn man</Link>,
+          bøte niv markum. <Link href="/word/drapare" prefetch={false}>Dræpær</Link> <Link href="/word/mather" prefetch={false}>maþær</Link> <Link href="/word/utlandsker" prefetch={false}>vtlænskan man</Link>,
+          eigh ma frid <Link href="/word/flyia" prefetch={false}>flyia</Link> or <Link href="/word/land" prefetch={false}>landi</Link> sinu oc j æth <Link href="/word/han-2" prefetch={false}>hans</Link>.
         </em>
       </p>
       <hr />
