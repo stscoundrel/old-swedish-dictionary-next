@@ -50,6 +50,10 @@ describe('Crosslinks service tests', () => {
         url: 'https://old-norwegian-dictionary.vercel.app/word/fadir',
         source: 'old-norwegian',
       },
+      {
+        url: 'https://old-danish-dictionary.vercel.app/word/fader',
+        source: 'old-danish',
+      },
     ]
 
     const result = getCrossLinks(entry2)
