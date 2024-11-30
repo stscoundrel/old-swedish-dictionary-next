@@ -2869,7 +2869,7 @@ exports[`Letter page: render Matches snapshot 1`] = `
       <li>
         <a
           className="link"
-          href="/word/enge-skrtuppb-72.-f.-enga-troj.-endga-ib.-n.-angha-arfstv-14-1461-."
+          href="/word/enge-skrtuppb-72.-f.-enga-troj.-endga-ib.-n.-angha"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
