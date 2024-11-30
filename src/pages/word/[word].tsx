@@ -5,6 +5,7 @@ import {
   getWord, getAlphabet, type AlphabetLetter, getSimilarWords,
   getInitialWordsToBuild,
 } from 'lib/services/dictionary'
+import { medievalFuthork } from 'riimut'
 
 // Utils.
 import { type Redirect404ResponseSchema, redirect404 } from 'lib/utils/redirect-404'
@@ -27,6 +28,7 @@ interface WordPageProps{
     letter: AlphabetLetter,
     abbreviations: Abbreviation[],
     crosslinks: Crosslink[],
+    runes: string,
 }
 
 interface WordPageParams{
@@ -90,6 +92,7 @@ export async function getStaticProps(
   )[0]
   const abbreviations = getAbbreviations(entry)
   const crosslinks = getCrossLinks(entry)
+  const runes = medievalFuthork.lettersToRunes(entry.headword)
 
   return {
     props: {
@@ -99,12 +102,13 @@ export async function getStaticProps(
       letters,
       abbreviations,
       crosslinks,
+      runes,
     },
   }
 }
 
 export default function Word({
-  entry, similarEntries = [], letters, letter, abbreviations, crosslinks,
+  entry, similarEntries = [], letters, letter, abbreviations, crosslinks, runes,
 }: WordPageProps) {
   const router = useRouter()
 
@@ -125,6 +129,7 @@ export default function Word({
         similarEntries={similarEntries}
         abbreviations={abbreviations}
         crosslinks={crosslinks}
+        runes={runes}
       />
       <Button text="Back" action={() => router.back()} />
     </Layout>

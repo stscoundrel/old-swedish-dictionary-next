@@ -1,7 +1,6 @@
 import { capitalize, getOlderSpelling } from 'lib/utils/strings'
-import { medievalFuthork } from 'riimut'
 import type { DictionaryEntry } from 'lib/models/dictionary'
-import { Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviations'
+import { type Abbreviation, addAbbreviationsToContent } from 'lib/services/abbreviations'
 import Abbreviations from 'components/Abbreviations'
 import type { Crosslink } from 'scandinavian-dictionary-crosslinker'
 import Crosslinks from 'components/Crosslinks'
@@ -13,10 +12,11 @@ interface WordDefinitionProps{
   similarEntries: DictionaryEntry[],
   abbreviations: Abbreviation[],
   crosslinks: Crosslink[],
+  runes: string,
 }
 
 export default function WordDefinition({
-  entry, similarEntries, abbreviations, crosslinks,
+  entry, similarEntries, abbreviations, crosslinks, runes,
 }: WordDefinitionProps) {
   const {
     headword, partOfSpeech, grammaticalAspect, information, definitions, alternativeForms,
@@ -75,7 +75,7 @@ export default function WordDefinition({
       }
 
       <p>Possible runic inscription in <em>Medieval Futhork</em>:
-        <span className={styles.rune}>{ medievalFuthork.lettersToRunes(headword) }</span><br />
+        <span className={styles.rune}>{runes}</span><br />
       <small>Medieval Runes were used in Sweden from 12th to 17th centuries.</small>
       </p>
 
