@@ -71,6 +71,7 @@ describe('Word page: render & usage', () => {
         letter={letter}
         abbreviations={abbreviations}
         crosslinks={crosslinks}
+        runes="ᛆᚠᚴᚯᚱᛆ"
       />,
     )
   })
@@ -84,6 +85,7 @@ describe('Word page: render & usage', () => {
         letter={letter}
         abbreviations={abbreviations}
         crosslinks={crosslinks}
+        runes="ᛆᚠᚴᚯᚱᛆ"
       />,
     ).toJSON()
     expect(tree).toMatchSnapshot()
@@ -98,6 +100,7 @@ describe('Word page: render & usage', () => {
         letter={letter}
         abbreviations={abbreviations}
         crosslinks={crosslinks}
+        runes="ᛆᚠᚴᚯᚱᛆ"
       />,
     ).toJSON()
     expect(tree).toBeNull()
@@ -112,6 +115,7 @@ describe('Word page: render & usage', () => {
       letter={letter}
       abbreviations={abbreviations}
       crosslinks={crosslinks}
+        runes="ᛆᚠᚴᚯᚱᛆ"
     />,
     )
 
@@ -146,6 +150,7 @@ describe('Word page: data fetching', () => {
         letter,
         abbreviations,
         crosslinks: [],
+        runes: 'ᛆᚠᚴᚯᚱᛆ',
       },
     }
 
