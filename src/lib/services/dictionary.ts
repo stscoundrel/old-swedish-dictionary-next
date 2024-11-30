@@ -1,8 +1,9 @@
 import { getDictionary } from 'old-swedish-dictionary'
 import { slugifyWord, slugifyLetter } from '../utils/slugs'
-import { OriginalDictionaryEntry, DictionaryEntry, DictionaryEntryDTO } from '../models/dictionary'
+import type { OriginalDictionaryEntry, DictionaryEntry, DictionaryEntryDTO } from '../models/dictionary'
 
 let cachedDictionary: DictionaryEntry[] | null = null
+let cachedInitialPages: string[] | null = null
 
 export interface AlphabetLetter {
   letter: string,
@@ -63,6 +64,25 @@ export const getWord = (word: string): DictionaryEntry => (
 
 export const getSimilarWords = (entry: DictionaryEntry) : DictionaryEntry[] => getAllWords()
   .filter((dEntry) => dEntry.headword === entry.headword && dEntry.slug !== entry.slug)
+
+/**
+ * Initial word pages to build are basically 6000
+ * headword pages based on modulus. Larger number
+ * can not be deployed in one go.
+ */
+export const getInitialWordsToBuild = (): string[] => {
+  if (cachedInitialPages) return cachedInitialPages
+
+  const allWords = getAllWords()
+
+  const result: string[] = []
+  for (let i = 0; i < allWords.length; i += 7) {
+    result.push(allWords[i].slug);
+  }
+
+  cachedInitialPages = result
+  return cachedInitialPages
+}
 
 export const getAlphabet = (): AlphabetLetter[] => {
   // Outputted from dictionary src with scripts/output-alphabet.js
