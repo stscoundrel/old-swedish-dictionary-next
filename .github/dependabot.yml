@@ -6,9 +6,12 @@ updates:
       interval: "monthly"
     open-pull-requests-limit: 25
     groups:
-       dependencies:
-          patterns:
-            - "*" # Match all dependencies to one PR.
+      npm-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
   
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -19,4 +22,3 @@ updates:
        dependencies:
           patterns:
             - "*" # Match all dependencies to one PR.
-
