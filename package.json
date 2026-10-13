@@ -20,8 +20,8 @@
     "jest": "jest --verbose --runInBand --passWithNoTests",
     "test:unit": "npm run jest --",
     "test:coverage": "jest --coverage tests src/components --coverageThreshold='{\"global\":{\"statements\":\"90\", \"functions\":\"85\", \"branches\":\"75\", \"lines\":\"90\"}}'",
-    "create:alphabet": "ts-node scripts/output-alphabet.ts",
-    "revalidate": "ts-node scripts/revalidate.ts",
+    "create:alphabet": "tsx scripts/output-alphabet.ts",
+    "revalidate": "tsx scripts/revalidate.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -37,7 +37,6 @@
     "riimut": "^0.9.1",
     "sass": "^1.97.3",
     "scandinavian-dictionary-crosslinker": "^0.7.0",
-    "sharp": "^0.34.5",
     "sitemap": "^7.1.1",
     "slugify": "^1.6.6",
     "teljari": "^1.1.1"
@@ -55,7 +54,7 @@
     "node-mocks-http": "^1.17.2",
     "prettier": "3.9.9",
     "react-test-renderer": "19.3.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }
