@@ -1,6 +1,6 @@
 {
   "name": "old-swedish-dictionary-next",
-  "description": "Next.js implementation of Medieval Swedish Dictionary by K.F. S\u00f6derwall",
+  "description": "Next.js implementation of Medieval Swedish Dictionary by K.F. Söderwall",
   "version": "0.1.0",
   "private": true,
   "repository": "https://github.com/stscoundrel/old-swedish-dictionary-next.git",
@@ -43,12 +43,12 @@
     "teljari": "^1.1.1"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.17.2",
     "@types/react": "^18.3.24",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "next-router-mock": "^0.9.13",
     "node-mocks-http": "^1.17.2",
     "prettier": "3.9.9",
