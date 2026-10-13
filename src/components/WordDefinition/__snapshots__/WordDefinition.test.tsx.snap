@@ -126,6 +126,7 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
+        ref={[Function]}
       >
         Afköra (I)
       </a>
@@ -163,6 +164,7 @@ exports[`WordDefinition component -> full entry Matches snapshot 1`] = `
       onClick={[Function]}
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
+      ref={[Function]}
     >
       ➞ See all works cited in the dictionary
     </a>
@@ -310,6 +312,7 @@ exports[`WordDefinition component -> minimal entry Matches snapshot 1`] = `
       onClick={[Function]}
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
+      ref={[Function]}
     >
       ➞ See all works cited in the dictionary
     </a>
