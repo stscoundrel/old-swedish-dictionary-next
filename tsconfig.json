@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "target": "es5",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    },
+    "target": "es2017",
+    "types": [
+      "node",
+      "jest"
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -28,10 +36,5 @@
   ],
   "exclude": [
     "node_modules"
-  ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  ]
 }
