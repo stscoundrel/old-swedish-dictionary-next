@@ -12,7 +12,9 @@ const words = [
     ],
     alternativeForms: ['-bortdrifva'],
     slug: 'afkora',
-    foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
+    foundIn: [
+      ' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+    ],
   },
   {
     headword: 'afköra 2',
@@ -23,7 +25,9 @@ const words = [
     ],
     alternativeForms: ['-bortdrifva'],
     slug: 'afkora',
-    foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
+    foundIn: [
+      ' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+    ],
   },
   {
     headword: 'afköra 3',
@@ -34,7 +38,9 @@ const words = [
     ],
     alternativeForms: ['-bortdrifva'],
     slug: 'afkora',
-    foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
+    foundIn: [
+      ' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+    ],
   },
 ]
 

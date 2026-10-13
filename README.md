@@ -31,3 +31,12 @@ The original material is licenced under [Creative Commons International (CC BY 4
 
 - https://spraakbanken.gu.se/en/resources/soederwall
 - https://spraakbanken.gu.se/en/resources/soederwall-supp
+
+## Development checks
+
+- `yarn lint` checks formatting in `src` and `tests`.
+- `yarn fix` formats those directories with Prettier.
+- `yarn typecheck` checks TypeScript without emitting files.
+- `yarn test:unit` runs Jest.
+
+Prettier uses single quotes and omits semicolons. CI checks formatting and TypeScript.

@@ -10,13 +10,17 @@ describe('LetterHeader component', () => {
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer.create(<LetterHeader letter="s" count={666} />).toJSON()
+    const tree = renderer
+      .create(<LetterHeader letter="s" count={666} />)
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Outputs correct count', () => {
     const tree = renderer.create(<LetterHeader letter="s" count={666} />)
     const { root } = tree
-    expect(root.findAllByType('small')[1].children.join(' ').includes('666')).toBeTruthy()
+    expect(
+      root.findAllByType('small')[1].children.join(' ').includes('666'),
+    ).toBeTruthy()
   })
 })

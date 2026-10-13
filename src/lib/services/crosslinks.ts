@@ -1,4 +1,8 @@
-import { getCrosslinks as getAllCrossLinks, Crosslink, getOldSwedishCrosslinks } from 'scandinavian-dictionary-crosslinker'
+import {
+  getCrosslinks as getAllCrossLinks,
+  Crosslink,
+  getOldSwedishCrosslinks,
+} from 'scandinavian-dictionary-crosslinker'
 import { DictionaryEntry } from 'lib/models/dictionary'
 
 export type { Crosslink } from 'scandinavian-dictionary-crosslinker'

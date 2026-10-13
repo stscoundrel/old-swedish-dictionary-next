@@ -8,13 +8,17 @@ describe('Sources page', () => {
   test('Does not crash', () => {
     const div = document.createElement('div')
     const root = ReactDOM.createRoot(div)
-    root.render(<Sources letters={getAlphabet()} sources={getAllAbbreviations()} />)
+    root.render(
+      <Sources letters={getAlphabet()} sources={getAllAbbreviations()} />,
+    )
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer.create(
+    const tree = renderer
+      .create(
         <Sources letters={getAlphabet()} sources={getAllAbbreviations()} />,
-    ).toJSON()
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

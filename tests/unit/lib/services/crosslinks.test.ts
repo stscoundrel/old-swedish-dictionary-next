@@ -1,9 +1,5 @@
-import {
-  DictionaryEntry,
-} from 'lib/models/dictionary'
-import {
-  getCrossLinks,
-} from 'lib/services/crosslinks'
+import { DictionaryEntry } from 'lib/models/dictionary'
+import { getCrossLinks } from 'lib/services/crosslinks'
 
 // Entry which does not produce crosslink matches.
 const entry1: DictionaryEntry = {
@@ -27,7 +23,6 @@ const entry2: DictionaryEntry = {
   alternativeForms: [],
   information: '',
   slug: 'fadhir',
-
 }
 
 describe('Crosslinks service tests', () => {

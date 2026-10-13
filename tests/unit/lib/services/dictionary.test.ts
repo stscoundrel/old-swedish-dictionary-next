@@ -1,6 +1,9 @@
 import { getDictionary } from 'old-swedish-dictionary'
 import {
-  getAllWords, getByLetter, getWord, getAlphabet,
+  getAllWords,
+  getByLetter,
+  getWord,
+  getAlphabet,
   getInitialWordsToBuild,
 } from 'lib/services/dictionary'
 
@@ -17,7 +20,15 @@ describe('Dictionary tests', () => {
 
   test('Dictionary has added url slugs to source', () => {
     dictionary.forEach((entry) => {
-      expect(Object.keys(entry)).toEqual(['headword', 'partOfSpeech', 'grammaticalAspect', 'information', 'definitions', 'alternativeForms', 'slug'])
+      expect(Object.keys(entry)).toEqual([
+        'headword',
+        'partOfSpeech',
+        'grammaticalAspect',
+        'information',
+        'definitions',
+        'alternativeForms',
+        'slug',
+      ])
     })
   })
 

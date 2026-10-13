@@ -7,6 +7,7 @@ describe('Breadcrumbs component', () => {
     headword: 'afköra',
     partOfSpeech: ['vb'],
     grammaticalAspect: 'v.',
+    information: '',
     definitions: [
       ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
     ],
@@ -26,7 +27,9 @@ describe('Breadcrumbs component', () => {
   })
 
   test('Default page: matches snapshot', () => {
-    const tree = renderer.create(<Breadcrumbs word={null} letter={null} />).toJSON()
+    const tree = renderer
+      .create(<Breadcrumbs word={null} letter={null} />)
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -44,9 +47,9 @@ describe('Breadcrumbs component', () => {
   })
 
   test('Letter page: matches snapshot', () => {
-    const tree = renderer.create(
-      <Breadcrumbs word={null} letter={letter} />,
-    ).toJSON()
+    const tree = renderer
+      .create(<Breadcrumbs word={null} letter={letter} />)
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -64,7 +67,9 @@ describe('Breadcrumbs component', () => {
   })
 
   test('Word page: matches snapshot', () => {
-    const tree = renderer.create(<Breadcrumbs word={word} letter={letter} />).toJSON()
+    const tree = renderer
+      .create(<Breadcrumbs word={word} letter={letter} />)
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 

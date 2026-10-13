@@ -5,8 +5,8 @@ import { DictionaryEntry } from 'lib/models/dictionary'
 import { AlphabetLetter } from 'lib/services/dictionary'
 import styles from './Breadcrumbs.module.scss'
 
-interface BreadcrumbProps{
-  word: DictionaryEntry | null,
+interface BreadcrumbProps {
+  word: DictionaryEntry | null
   letter: AlphabetLetter | null
 }
 
@@ -40,7 +40,10 @@ export default function Breadcrumbs({ word, letter }: BreadcrumbProps) {
           </Link>
         ))}
 
-        <script type='application/ld+json' dangerouslySetInnerHTML={ { __html: schema } }/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schema }}
+        />
       </div>
     </nav>
   )

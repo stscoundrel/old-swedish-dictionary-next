@@ -11,7 +11,9 @@ const result = {
   ],
   alternativeForms: ['-bortdrifva'],
   slug: 'afkora',
-  foundIn: [' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.'],
+  foundIn: [
+    ' , vräka. hafwi wald han <mark>afköra</mark>  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
+  ],
 }
 
 describe('Search teaser component', () => {

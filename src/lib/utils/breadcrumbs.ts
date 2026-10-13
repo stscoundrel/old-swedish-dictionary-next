@@ -1,14 +1,14 @@
 import { slugifyLetter, slugifyWord } from 'lib/utils/slugs'
 import { capitalize } from 'lib/utils/strings'
 
-export interface Breadcrumb{
-    label: string,
-    url: string,
+export interface Breadcrumb {
+  label: string
+  url: string
 }
 
-export interface BreadcrumbRequest{
-    word?: string | null,
-    letter?: string | null
+export interface BreadcrumbRequest {
+  word?: string | null
+  letter?: string | null
 }
 
 const getFrontpage = () => ({

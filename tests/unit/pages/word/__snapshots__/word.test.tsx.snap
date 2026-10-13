@@ -491,12 +491,14 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
             afköra
             "
           </em>
-           (or 
+           
+          (or 
           <em>
             afkøra
           </em>
           )
-           in Swedish.
+           
+          in Swedish.
         </p>
         <p>
           As defined by K.F Söderwall's dictionary of Medieval Swedish:
@@ -531,7 +533,8 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
         <em>
           afköra
         </em>
-         may have also been written as 
+         may have also been written as
+         
         <em>
           afkøra
         </em>

@@ -5,20 +5,20 @@ import { DictionaryEntry, DictionaryEntryDTO } from 'lib/models/dictionary'
 import { Breadcrumb } from 'lib/utils/breadcrumbs'
 
 interface SchemaListItem {
-  '@type': string,
+  '@type': string
   position: number
-  name: string,
-  item: string,
+  name: string
+  item: string
 }
 
 interface SchemaDefinition {
-  '@context': string,
-  '@type': string,
-  '@id'?: string,
-  name?: string,
-  description?: string,
-  itemListElement?: SchemaListItem[],
-  inDefinedTermSet?: string,
+  '@context': string
+  '@type': string
+  '@id'?: string
+  name?: string
+  description?: string
+  itemListElement?: SchemaListItem[]
+  inDefinedTermSet?: string
 }
 
 const getDefinedTermSetData = (
@@ -81,7 +81,9 @@ export const getWordSchema = (entry: DictionaryEntry): string => {
   return JSON.stringify(schema)
 }
 
-export const getLetterSchema = (entries: DictionaryEntry[] | DictionaryEntryDTO[]): string => {
+export const getLetterSchema = (
+  entries: DictionaryEntry[] | DictionaryEntryDTO[],
+): string => {
   const schema = getDefinedTermSetData(entries)
   return JSON.stringify(schema)
 }
