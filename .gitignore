@@ -39,7 +39,9 @@ yarn-error.log*
 # Cypress
 tests/integration/logs
 /public/sw.js
-public/workbox-*.js
+/public/sw.js.map
+/public/swe-worker-*.js
+/public/swe-worker-*.js.map
 
 # Yarn
 .pnp.*

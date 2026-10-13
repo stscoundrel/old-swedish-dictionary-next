@@ -1,6 +1,6 @@
 {
   "name": "old-swedish-dictionary-next",
-  "description": "Next.js implementation of Medieval Swedish Dictionary by K.F. Söderwall",
+  "description": "Next.js implementation of Medieval Swedish Dictionary by K.F. S\u00f6derwall",
   "version": "0.1.0",
   "private": true,
   "repository": "https://github.com/stscoundrel/old-swedish-dictionary-next.git",
@@ -25,10 +25,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@serwist/next": "^9.5.13",
     "abbreviatrix": "^1.0.8",
     "markari": "^1.0.7",
     "next": "16.4.0",
-    "next-pwa": "^5.6.0",
     "old-swedish-dictionary": "^1.0.4",
     "old-swedish-dictionary-abbreviations": "^0.1.0",
     "react": "19.3.0",
@@ -37,6 +37,7 @@
     "riimut": "^0.9.1",
     "sass": "^1.105.1",
     "scandinavian-dictionary-crosslinker": "^0.7.0",
+    "serwist": "^9.5.13",
     "sitemap": "^7.1.1",
     "slugify": "^1.6.6",
     "teljari": "^1.1.1"

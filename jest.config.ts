@@ -8,6 +8,7 @@ const customJestConfig: Config = {
   collectCoverageFrom: [
     'src/**',
     '!**/*.d.ts',
+    '!src/sw.ts', // Runs in a service worker, outside Jest's DOM environment.
     '!**/node_modules/**',
     '!.next/**',
     '!**/*.tsx.snap',
