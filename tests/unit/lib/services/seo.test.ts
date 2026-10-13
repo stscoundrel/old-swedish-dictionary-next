@@ -5,8 +5,9 @@ describe('SEO / meta tags tests', () => {
   const words: DictionaryEntry[] = [
     {
       headword: 'afköra',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
@@ -15,44 +16,53 @@ describe('SEO / meta tags tests', () => {
     },
     {
       headword: 'afköra 2',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
       alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
-    }, {
+    },
+    {
       headword: 'afköra 3',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
       alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
-    }, {
+    },
+    {
       headword: 'afköra 4',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
       alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
-    }, {
+    },
+    {
       headword: 'afköra 5',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
       alternativeForms: ['-bortdrifva'],
       slug: 'afkora',
-    }, {
+    },
+    {
       headword: 'afköra 6',
-      partOfSpeech: 'vb',
+      partOfSpeech: ['vb'],
       grammaticalAspect: 'v.',
+      information: '',
       definitions: [
         ' , vräka. hafwi wald han afköra  GS 43 (1416?). af ty ahren (för areno) han landboen afkörer ib.',
       ],
@@ -75,7 +85,8 @@ describe('SEO / meta tags tests', () => {
   test('Handles "letter" seo fields', () => {
     const expected = {
       title: 'Old Swedish words starting with letter A',
-      description: 'Meanings of Old Swedish words starting with "A", such as afköra, afköra 2, afköra 3 and afköra 4',
+      description:
+        'Meanings of Old Swedish words starting with "A", such as afköra, afköra 2, afköra 3 and afköra 4',
     }
     const letter = {
       letter: 'a',
@@ -89,7 +100,8 @@ describe('SEO / meta tags tests', () => {
   test('Handles default response', () => {
     const expected = {
       title: 'Old Swedish Dictionary - K.F. Söderwall',
-      description: 'Medieval Swedish Dictionary - 40 000+ words and definitions',
+      description:
+        'Medieval Swedish Dictionary - 40 000+ words and definitions',
     }
 
     const result = getDefaultSEO()

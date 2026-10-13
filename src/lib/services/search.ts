@@ -2,9 +2,9 @@ import { markWords } from 'markari'
 import { DictionaryEntry } from 'lib/models/dictionary'
 
 export interface SearchResult {
-  headword: string,
-  slug: string,
-  foundIn: string[],
+  headword: string
+  slug: string
+  foundIn: string[]
 }
 
 export type Criteria = 'headword' | 'definitions'

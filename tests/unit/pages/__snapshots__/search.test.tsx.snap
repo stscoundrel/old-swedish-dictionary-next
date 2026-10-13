@@ -484,7 +484,8 @@ exports[`Search page: render Matches snapshot 1`] = `
             type="radio"
             value="criteria"
           />
-           Everything
+           
+          Everything
         </li>
         <li
           className="listItem"
@@ -496,7 +497,8 @@ exports[`Search page: render Matches snapshot 1`] = `
             type="radio"
             value="criteria"
           />
-           Headwords
+           
+          Headwords
         </li>
         <li
           className="listItem"
@@ -508,7 +510,8 @@ exports[`Search page: render Matches snapshot 1`] = `
             type="radio"
             value="criteria"
           />
-           Definitions
+           
+          Definitions
         </li>
       </ul>
       <button

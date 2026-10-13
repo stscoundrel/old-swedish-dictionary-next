@@ -11,8 +11,8 @@ import Search from 'components/SearchBar'
 import { AlphabetLetter } from 'lib/services/dictionary'
 import styles from './Navigation.module.scss'
 
-interface NavigationProps{
-  letters: AlphabetLetter[],
+interface NavigationProps {
+  letters: AlphabetLetter[]
 }
 
 export default function Navigation({ letters }: NavigationProps) {
@@ -30,7 +30,12 @@ export default function Navigation({ letters }: NavigationProps) {
       <nav className={styles.section}>
         <div className={`${styles.topbar} container`}>
           <Link href="/" passHref prefetch={false}>
-            <Image src="/favicon-48x48.png" width="30" height="30" alt="To home" />
+            <Image
+              src="/favicon-48x48.png"
+              width="30"
+              height="30"
+              alt="To home"
+            />
           </Link>
           <Hamburger action={openNav} />
         </div>

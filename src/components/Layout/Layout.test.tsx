@@ -26,17 +26,19 @@ describe('Layout component', () => {
     })
 
     test('Matches snapshot', () => {
-      const tree = renderer.create(
-        <Layout
-          words={aWords}
-          word={null}
-          type={ContentType.Letter}
-          letters={letters}
-          letter={letters[0]}
-        >
-          <p>Content</p>
-        </Layout>,
-      ).toJSON()
+      const tree = renderer
+        .create(
+          <Layout
+            words={aWords}
+            word={null}
+            type={ContentType.Letter}
+            letters={letters}
+            letter={letters[0]}
+          >
+            <p>Content</p>
+          </Layout>,
+        )
+        .toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
@@ -62,17 +64,19 @@ describe('Layout component', () => {
     })
 
     test('Matches snapshot', () => {
-      const tree = renderer.create(
-        <Layout
-          words={[]}
-          word={word}
-          type={ContentType.Word}
-          letters={letters}
-          letter={null}
-        >
-          <p>Content</p>
-        </Layout>,
-      ).toJSON()
+      const tree = renderer
+        .create(
+          <Layout
+            words={[]}
+            word={word}
+            type={ContentType.Word}
+            letters={letters}
+            letter={null}
+          >
+            <p>Content</p>
+          </Layout>,
+        )
+        .toJSON()
       expect(tree).toMatchSnapshot()
     })
   })

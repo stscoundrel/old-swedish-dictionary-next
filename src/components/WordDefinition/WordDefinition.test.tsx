@@ -1,7 +1,10 @@
 import { DictionaryEntry } from 'lib/models/dictionary'
 import ReactDOM from 'react-dom/client'
 import renderer from 'react-test-renderer'
-import { Crosslink, DictionarySource } from 'scandinavian-dictionary-crosslinker'
+import {
+  Crosslink,
+  DictionarySource,
+} from 'scandinavian-dictionary-crosslinker'
 import WordDefinition from './index'
 
 const entry: DictionaryEntry = {
@@ -32,7 +35,8 @@ const minimalEntry: DictionaryEntry = {
 const abbreviations = [
   {
     abbreviation: 'GS',
-    explanation: 'Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.',
+    explanation:
+      'Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.',
   },
 ]
 
@@ -51,7 +55,7 @@ const crosslinks: Crosslink[] = [
   },
 ]
 
-const runes = 'ᛆᚠᚴᚮᚱᛆ';
+const runes = 'ᛆᚠᚴᚮᚱᛆ'
 
 describe('WordDefinition component -> full entry', () => {
   test('Does not crash', () => {
@@ -69,15 +73,17 @@ describe('WordDefinition component -> full entry', () => {
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer.create(
-      <WordDefinition
-        entry={entry}
-        similarEntries={[entry]}
-        abbreviations={abbreviations}
-        crosslinks={crosslinks}
-        runes={runes}
-      />,
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <WordDefinition
+          entry={entry}
+          similarEntries={[entry]}
+          abbreviations={abbreviations}
+          crosslinks={crosslinks}
+          runes={runes}
+        />,
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -113,15 +119,17 @@ describe('WordDefinition component -> minimal entry', () => {
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer.create(
-      <WordDefinition
-        entry={minimalEntry}
-        similarEntries={[]}
-        abbreviations={abbreviations}
-        crosslinks={crosslinks}
-        runes={runes}
-      />,
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <WordDefinition
+          entry={minimalEntry}
+          similarEntries={[]}
+          abbreviations={abbreviations}
+          crosslinks={crosslinks}
+          runes={runes}
+        />,
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 

@@ -2,12 +2,14 @@ import OSAbbreviations from 'old-swedish-dictionary-abbreviations'
 import { abbreviate } from 'abbreviatrix'
 import { DictionaryEntry } from 'old-swedish-dictionary'
 
-export interface Abbreviation{
-    abbreviation: string,
-    explanation: string
+export interface Abbreviation {
+  abbreviation: string
+  explanation: string
 }
 
-export const getAbbreviations = ({ definitions }: DictionaryEntry): Abbreviation[] => {
+export const getAbbreviations = ({
+  definitions,
+}: DictionaryEntry): Abbreviation[] => {
   const combinedAbbreviations: Abbreviation[] = []
   const abbreviationSet = new Set()
 
@@ -21,7 +23,7 @@ export const getAbbreviations = ({ definitions }: DictionaryEntry): Abbreviation
     })
   })
 
-  return combinedAbbreviations;
+  return combinedAbbreviations
 }
 
 /**
@@ -42,7 +44,8 @@ export const addAbbreviationsToContent = (
 
 export const getAllAbbreviations = (): Abbreviation[] => {
   const abbrs = OSAbbreviations.getWorksAndAuthorsMapping()
-  return Array
-    .from(abbrs, ([abbreviation, explanation]) => ({ explanation, abbreviation }))
-    .sort((a, b) => a.abbreviation.localeCompare(b.abbreviation))
+  return Array.from(abbrs, ([abbreviation, explanation]) => ({
+    explanation,
+    abbreviation,
+  })).sort((a, b) => a.abbreviation.localeCompare(b.abbreviation))
 }

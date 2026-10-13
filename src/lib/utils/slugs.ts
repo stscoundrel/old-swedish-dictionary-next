@@ -1,8 +1,8 @@
 import slugify from 'slugify'
 
 interface SlugMapping {
-    letter: string,
-    slug: string
+  letter: string
+  slug: string
 }
 
 const slugTable: SlugMapping[] = [
@@ -37,15 +37,15 @@ export const slugifyLetter = (letter: string): string => {
 }
 
 export const slugifyWord = (word: string): string => {
-  const result = slugify(word).toLowerCase();
+  const result = slugify(word).toLowerCase()
 
   if (result.length < 50) {
-    return result;
+    return result
   }
 
   // Slugs longer than this are essentially data errors
   // just clean them up to build passes.
-  return result.substring(0, 50);
+  return result.substring(0, 50)
 }
 
 export const decodeLetter = (slug: string): string => {

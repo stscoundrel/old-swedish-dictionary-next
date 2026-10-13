@@ -2,7 +2,10 @@ import ReactDOM from 'react-dom/client'
 import Word, { getStaticProps, getStaticPaths } from 'pages/word/[word]'
 import renderer from 'react-test-renderer'
 import { getAlphabet } from 'lib/services/dictionary'
-import { Crosslink, DictionarySource } from 'scandinavian-dictionary-crosslinker'
+import {
+  Crosslink,
+  DictionarySource,
+} from 'scandinavian-dictionary-crosslinker'
 
 const mockHandler = jest.fn()
 
@@ -40,7 +43,8 @@ const letter = {
 const abbreviations = [
   {
     abbreviation: 'GS',
-    explanation: 'Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.',
+    explanation:
+      'Några Gambla Stadgar [såsom bihang till Biärköa-Rätten utg. af J. Hadorph]. 1687.',
   },
 ]
 
@@ -77,6 +81,40 @@ describe('Word page: render & usage', () => {
   })
 
   test('Matches snapshot', () => {
+    const tree = renderer
+      .create(
+        <Word
+          entry={entry}
+          similarEntries={[]}
+          letters={getAlphabet()}
+          letter={letter}
+          abbreviations={abbreviations}
+          crosslinks={crosslinks}
+          runes="ᛆᚠᚴᚯᚱᛆ"
+        />,
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Returns null if entry is unavailable', () => {
+    const tree = renderer
+      .create(
+        <Word
+          entry={null}
+          similarEntries={[]}
+          letters={getAlphabet()}
+          letter={letter}
+          abbreviations={abbreviations}
+          crosslinks={crosslinks}
+          runes="ᛆᚠᚴᚯᚱᛆ"
+        />,
+      )
+      .toJSON()
+    expect(tree).toBeNull()
+  })
+
+  test('Back button works', async () => {
     const tree = renderer.create(
       <Word
         entry={entry}
@@ -87,36 +125,6 @@ describe('Word page: render & usage', () => {
         crosslinks={crosslinks}
         runes="ᛆᚠᚴᚯᚱᛆ"
       />,
-    ).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('Returns null if entry is unavailable', () => {
-    const tree = renderer.create(
-      <Word
-        entry={null}
-        similarEntries={[]}
-        letters={getAlphabet()}
-        letter={letter}
-        abbreviations={abbreviations}
-        crosslinks={crosslinks}
-        runes="ᛆᚠᚴᚯᚱᛆ"
-      />,
-    ).toJSON()
-    expect(tree).toBeNull()
-  })
-
-  test('Back button works', async () => {
-    const tree = renderer.create(
-      <Word
-      entry={entry}
-      similarEntries={[]}
-      letters={getAlphabet()}
-      letter={letter}
-      abbreviations={abbreviations}
-      crosslinks={crosslinks}
-        runes="ᛆᚠᚴᚯᚱᛆ"
-    />,
     )
 
     // Click back btn.
@@ -126,7 +134,7 @@ describe('Word page: render & usage', () => {
 
       // Assert mockrouter received a push.
       expect(mockHandler).toHaveBeenCalled()
-      expect(mockHandler.mock.calls.length).toBe(1);
+      expect(mockHandler.mock.calls.length).toBe(1)
     })
   })
 })
@@ -175,7 +183,10 @@ describe('Word page: data fetching', () => {
     ]
 
     const result = await getStaticProps({ params: { word: 'fosterfadhir' } })
-    expect(result.props.similarEntries).toEqual(expected)
+    expect('similarEntries' in result.props).toBe(true)
+    if ('similarEntries' in result.props) {
+      expect(result.props.similarEntries).toEqual(expected)
+    }
   })
 
   test('getStaticProps returns 404 redirect for unkown words', async () => {

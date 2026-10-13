@@ -1,13 +1,17 @@
 import { getDictionary } from 'old-swedish-dictionary'
 import { slugifyWord, slugifyLetter } from '../utils/slugs'
-import type { OriginalDictionaryEntry, DictionaryEntry, DictionaryEntryDTO } from '../models/dictionary'
+import type {
+  OriginalDictionaryEntry,
+  DictionaryEntry,
+  DictionaryEntryDTO,
+} from '../models/dictionary'
 
 let cachedDictionary: DictionaryEntry[] | null = null
 let cachedInitialPages: string[] | null = null
 
 export interface AlphabetLetter {
-  letter: string,
-  slug: string,
+  letter: string
+  slug: string
 }
 
 const addSlugs = (words: OriginalDictionaryEntry[]): DictionaryEntry[] => {
@@ -51,19 +55,23 @@ export const getAllWords = (): DictionaryEntry[] => {
 export const getByLetter = (letter: string): DictionaryEntryDTO[] => {
   const words = getAllWords()
   const byLetter = words
-    .filter((entry) => (
-      entry.headword.charAt(0).toLowerCase() === letter.toLowerCase()))
+    .filter(
+      (entry) =>
+        entry.headword.charAt(0).toLowerCase() === letter.toLowerCase(),
+    )
     .map((entry) => ({ headword: entry.headword, slug: entry.slug }))
 
   return byLetter
 }
 
-export const getWord = (word: string): DictionaryEntry => (
+export const getWord = (word: string): DictionaryEntry =>
   getAllWords().filter((entry) => entry.slug === word)[0]
-)
 
-export const getSimilarWords = (entry: DictionaryEntry) : DictionaryEntry[] => getAllWords()
-  .filter((dEntry) => dEntry.headword === entry.headword && dEntry.slug !== entry.slug)
+export const getSimilarWords = (entry: DictionaryEntry): DictionaryEntry[] =>
+  getAllWords().filter(
+    (dEntry) =>
+      dEntry.headword === entry.headword && dEntry.slug !== entry.slug,
+  )
 
 /**
  * Initial word pages to build are basically 6000
@@ -77,7 +85,7 @@ export const getInitialWordsToBuild = (): string[] => {
 
   const result: string[] = []
   for (let i = 0; i < allWords.length; i += 7) {
-    result.push(allWords[i].slug);
+    result.push(allWords[i].slug)
   }
 
   cachedInitialPages = result

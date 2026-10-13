@@ -21,9 +21,9 @@ describe('Crosslinks component', () => {
   ]
 
   test('Matches the snapshot', () => {
-    const tree = renderer.create(
-      <Crosslinks crosslinks={crosslinks} />,
-    ).toJSON()
+    const tree = renderer
+      .create(<Crosslinks crosslinks={crosslinks} />)
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -31,14 +31,22 @@ describe('Crosslinks component', () => {
     const tree = renderer.create(<Crosslinks crosslinks={crosslinks} />)
     const { root } = tree
 
-    expect(root.findAllByProps({ className: styles.listItem }).length).toEqual(3)
+    expect(root.findAllByProps({ className: styles.listItem }).length).toEqual(
+      3,
+    )
   })
 
   test('Has expected crosslink content', () => {
     const tree = renderer.create(<Crosslinks crosslinks={crosslinks} />)
 
-    expect(JSON.stringify(tree)).toContain('Old Norse - Cleasby & Vigfusson Dictionary')
-    expect(JSON.stringify(tree)).toContain('Old Norwegian - Johan Fritzner\'s Dictionary')
-    expect(JSON.stringify(tree)).toContain('Old Icelandic - Geir Zoëga\'s Dictionary')
+    expect(JSON.stringify(tree)).toContain(
+      'Old Norse - Cleasby & Vigfusson Dictionary',
+    )
+    expect(JSON.stringify(tree)).toContain(
+      "Old Norwegian - Johan Fritzner's Dictionary",
+    )
+    expect(JSON.stringify(tree)).toContain(
+      "Old Icelandic - Geir Zoëga's Dictionary",
+    )
   })
 })

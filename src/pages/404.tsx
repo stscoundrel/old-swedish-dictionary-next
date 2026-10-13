@@ -19,13 +19,19 @@ export async function getStaticProps() {
   }
 }
 
-interface Error404Props{
+interface Error404Props {
   letters: AlphabetLetter[]
 }
 
 export default function ErrorPage404({ letters }: Error404Props) {
   return (
-    <Layout type={ContentType.Page} letters={letters} letter={null} word={null} words={[]}>
+    <Layout
+      type={ContentType.Page}
+      letters={letters}
+      letter={null}
+      word={null}
+      words={[]}
+    >
       <ContentArea>
         <h1>Page not found</h1>
         <p>Huh, that&apos;s weird.</p>

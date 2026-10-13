@@ -523,9 +523,12 @@ exports[`Index page Matches snapshot 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-             svænskan man
+             
+            svænskan man
           </a>
-           eller 
+           
+          eller
+           
           <a
             href="/word/smalandinge-2"
             onClick={[Function]}
@@ -534,7 +537,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             smalenskæn
           </a>
-          , 
+          ,
+           
           <a
             href="/word/innan"
             onClick={[Function]}
@@ -543,7 +547,9 @@ exports[`Index page Matches snapshot 1`] = `
           >
             innan
           </a>
-           konongsrikis 
+           
+          konongsrikis
+           
           <a
             href="/word/man"
             onClick={[Function]}
@@ -552,7 +558,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             man
           </a>
-          , eigh 
+          , eigh
+           
           <a
             href="/word/vastgotska"
             onClick={[Function]}
@@ -561,7 +568,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             væstgøskan
           </a>
-          , bøte firi 
+          , bøte firi
+           
           <a
             href="/word/atta"
             onClick={[Function]}
@@ -579,7 +587,9 @@ exports[`Index page Matches snapshot 1`] = `
           >
             ørtogher
           </a>
-           ok þrettan markær ok ænga ætar 
+           
+          ok þrettan markær ok ænga ætar
+           
           <a
             href="/word/bot"
             onClick={[Function]}
@@ -588,7 +598,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             bot
           </a>
-          . 
+          .
+           
           <a
             href="/word/drapare"
             onClick={[Function]}
@@ -615,7 +626,9 @@ exports[`Index page Matches snapshot 1`] = `
           >
             danskan man
           </a>
-           allæ 
+           
+          allæ
+           
           <a
             href="/word/norisker"
             onClick={[Function]}
@@ -624,7 +637,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             noræn man
           </a>
-          , bøte niv markum. 
+          , bøte niv markum.
+           
           <a
             href="/word/drapare"
             onClick={[Function]}
@@ -651,7 +665,8 @@ exports[`Index page Matches snapshot 1`] = `
           >
             vtlænskan man
           </a>
-          , eigh ma frid 
+          , eigh ma frid
+           
           <a
             href="/word/flyia"
             onClick={[Function]}
@@ -660,7 +675,9 @@ exports[`Index page Matches snapshot 1`] = `
           >
             flyia
           </a>
-           or 
+           
+          or
+           
           <a
             href="/word/land"
             onClick={[Function]}
@@ -669,7 +686,9 @@ exports[`Index page Matches snapshot 1`] = `
           >
             landi
           </a>
-           sinu oc j æth 
+           
+          sinu oc j æth
+           
           <a
             href="/word/han-2"
             onClick={[Function]}
@@ -727,7 +746,8 @@ exports[`Index page Matches snapshot 1`] = `
         <em>
           ø
         </em>
-         were used for modern 
+         were used for modern
+         
         <em>
           ä
         </em>
@@ -739,7 +759,8 @@ exports[`Index page Matches snapshot 1`] = `
         <em>
           þ
         </em>
-         could be used for both 
+         could be used for both
+         
         <em>
           ð
         </em>

@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer'
 import Search from './index'
 
 const mockHandler = jest.fn()
-const mockEvent = jest.fn()
-mockEvent.preventDefault = jest.fn()
+const mockEvent = { preventDefault: jest.fn() }
 
 /**
  * Mock router
@@ -38,9 +37,7 @@ describe('Search component', () => {
   })
 
   test('Triggers callback after click', async () => {
-    const tree = renderer.create(
-      <Search />,
-    )
+    const tree = renderer.create(<Search />)
 
     // Submit search form.
     await renderer.act(async () => {
@@ -51,7 +48,7 @@ describe('Search component', () => {
       // Assert mockrouter received a push.
       expect(mockHandler).toHaveBeenCalled()
       expect(mockHandler).toHaveBeenCalledWith('/search/?query=')
-      expect(mockHandler.mock.calls.length).toBe(1);
+      expect(mockHandler.mock.calls.length).toBe(1)
     })
   })
 })

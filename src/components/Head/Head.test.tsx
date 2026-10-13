@@ -10,14 +10,28 @@ describe('Head component', () => {
       const aWords = getByLetter('a').slice(0, 10)
       const div = document.createElement('div')
       const root = ReactDOM.createRoot(div)
-      root.render(<Head words={aWords} word={null} letter={null} type={ContentType.Letter} />)
+      root.render(
+        <Head
+          words={aWords}
+          word={null}
+          letter={null}
+          type={ContentType.Letter}
+        />,
+      )
     })
 
     test('Matches snapshot', () => {
       const aWords = getByLetter('a').slice(0, 10)
-      const tree = renderer.create(
-        <Head words={aWords} word={null} letter={null} type={ContentType.Letter} />,
-      ).toJSON()
+      const tree = renderer
+        .create(
+          <Head
+            words={aWords}
+            word={null}
+            letter={null}
+            type={ContentType.Letter}
+          />,
+        )
+        .toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
@@ -28,13 +42,17 @@ describe('Head component', () => {
     test('Does not crash', () => {
       const div = document.createElement('div')
       const root = ReactDOM.createRoot(div)
-      root.render(<Head word={word} words={[]} letter={null} type={ContentType.Letter} />)
+      root.render(
+        <Head word={word} words={[]} letter={null} type={ContentType.Letter} />,
+      )
     })
 
     test('Matches snapshot', () => {
-      const tree = renderer.create(
-        <Head word={word} words={[]} letter={null} type={ContentType.Word} />,
-      ).toJSON()
+      const tree = renderer
+        .create(
+          <Head word={word} words={[]} letter={null} type={ContentType.Word} />,
+        )
+        .toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
