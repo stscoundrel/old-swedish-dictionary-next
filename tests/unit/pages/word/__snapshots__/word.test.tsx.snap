@@ -17,6 +17,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
+          ref={[Function]}
         >
           <img
             alt="To home"
@@ -26,6 +27,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
+            ref={[Function]}
             src="/_next/image?url=%2Ffavicon-48x48.png&w=64&q=75"
             srcSet="/_next/image?url=%2Ffavicon-48x48.png&w=32&q=75 1x, /_next/image?url=%2Ffavicon-48x48.png&w=64&q=75 2x"
             style={
@@ -68,6 +70,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               a
             </a>
@@ -81,6 +84,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               b
             </a>
@@ -94,6 +98,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               c
             </a>
@@ -107,6 +112,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               d
             </a>
@@ -120,6 +126,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               e
             </a>
@@ -133,6 +140,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               f
             </a>
@@ -146,6 +154,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               g
             </a>
@@ -159,6 +168,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               h
             </a>
@@ -172,6 +182,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               i
             </a>
@@ -185,6 +196,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               j
             </a>
@@ -198,6 +210,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               k
             </a>
@@ -211,6 +224,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               l
             </a>
@@ -224,6 +238,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               m
             </a>
@@ -237,6 +252,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               n
             </a>
@@ -250,6 +266,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               o
             </a>
@@ -263,6 +280,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               p
             </a>
@@ -276,6 +294,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               q
             </a>
@@ -289,6 +308,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               r
             </a>
@@ -302,6 +322,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               s
             </a>
@@ -315,6 +336,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               t
             </a>
@@ -328,6 +350,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               u
             </a>
@@ -341,6 +364,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               v
             </a>
@@ -354,6 +378,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               y
             </a>
@@ -367,6 +392,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               ä
             </a>
@@ -380,6 +406,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               ö
             </a>
@@ -393,6 +420,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
+              ref={[Function]}
             >
               þ
             </a>
@@ -434,6 +462,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
+          ref={[Function]}
         >
           Old Swedish Dictionary
         </a>
@@ -443,6 +472,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
+          ref={[Function]}
         >
           Letter A
         </a>
@@ -452,6 +482,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
+          ref={[Function]}
         >
           Afköra
         </a>
@@ -615,6 +646,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
+          ref={[Function]}
         >
           ➞ See all works cited in the dictionary
         </a>
@@ -837,6 +869,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 a
               </a>
@@ -850,6 +883,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 b
               </a>
@@ -863,6 +897,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 c
               </a>
@@ -876,6 +911,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 d
               </a>
@@ -889,6 +925,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 e
               </a>
@@ -902,6 +939,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 f
               </a>
@@ -915,6 +953,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 g
               </a>
@@ -928,6 +967,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 h
               </a>
@@ -941,6 +981,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 i
               </a>
@@ -954,6 +995,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 j
               </a>
@@ -967,6 +1009,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 k
               </a>
@@ -980,6 +1023,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 l
               </a>
@@ -993,6 +1037,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 m
               </a>
@@ -1006,6 +1051,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 n
               </a>
@@ -1019,6 +1065,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 o
               </a>
@@ -1032,6 +1079,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 p
               </a>
@@ -1045,6 +1093,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 q
               </a>
@@ -1058,6 +1107,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 r
               </a>
@@ -1071,6 +1121,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 s
               </a>
@@ -1084,6 +1135,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 t
               </a>
@@ -1097,6 +1149,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 u
               </a>
@@ -1110,6 +1163,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 v
               </a>
@@ -1123,6 +1177,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 y
               </a>
@@ -1136,6 +1191,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 ä
               </a>
@@ -1149,6 +1205,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 ö
               </a>
@@ -1162,6 +1219,7 @@ exports[`Word page: render & usage Matches snapshot 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
+                ref={[Function]}
               >
                 þ
               </a>

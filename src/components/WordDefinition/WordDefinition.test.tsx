@@ -1,6 +1,5 @@
+import { createRenderer, renderToDOM } from '../../../tests/helpers/react'
 import { DictionaryEntry } from 'lib/models/dictionary'
-import ReactDOM from 'react-dom/client'
-import renderer from 'react-test-renderer'
 import {
   Crosslink,
   DictionarySource,
@@ -59,9 +58,7 @@ const runes = 'ᛆᚠᚴᚮᚱᛆ'
 
 describe('WordDefinition component -> full entry', () => {
   test('Does not crash', () => {
-    const div = document.createElement('div')
-    const root = ReactDOM.createRoot(div)
-    root.render(
+    renderToDOM(
       <WordDefinition
         entry={entry}
         abbreviations={abbreviations}
@@ -73,22 +70,20 @@ describe('WordDefinition component -> full entry', () => {
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer
-      .create(
-        <WordDefinition
-          entry={entry}
-          similarEntries={[entry]}
-          abbreviations={abbreviations}
-          crosslinks={crosslinks}
-          runes={runes}
-        />,
-      )
-      .toJSON()
+    const tree = createRenderer(
+      <WordDefinition
+        entry={entry}
+        similarEntries={[entry]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+        runes={runes}
+      />,
+    ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
-    const tree = renderer.create(
+    const tree = createRenderer(
       <WordDefinition
         entry={entry}
         similarEntries={[entry]}
@@ -105,9 +100,7 @@ describe('WordDefinition component -> full entry', () => {
 
 describe('WordDefinition component -> minimal entry', () => {
   test('Does not crash', () => {
-    const div = document.createElement('div')
-    const root = ReactDOM.createRoot(div)
-    root.render(
+    renderToDOM(
       <WordDefinition
         entry={minimalEntry}
         similarEntries={[]}
@@ -119,22 +112,20 @@ describe('WordDefinition component -> minimal entry', () => {
   })
 
   test('Matches snapshot', () => {
-    const tree = renderer
-      .create(
-        <WordDefinition
-          entry={minimalEntry}
-          similarEntries={[]}
-          abbreviations={abbreviations}
-          crosslinks={crosslinks}
-          runes={runes}
-        />,
-      )
-      .toJSON()
+    const tree = createRenderer(
+      <WordDefinition
+        entry={minimalEntry}
+        similarEntries={[]}
+        abbreviations={abbreviations}
+        crosslinks={crosslinks}
+        runes={runes}
+      />,
+    ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Has correct title', () => {
-    const tree = renderer.create(
+    const tree = createRenderer(
       <WordDefinition
         entry={minimalEntry}
         similarEntries={[]}
