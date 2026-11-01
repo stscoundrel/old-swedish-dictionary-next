@@ -31,8 +31,8 @@
     "next": "16.4.0",
     "old-swedish-dictionary": "^1.0.4",
     "old-swedish-dictionary-abbreviations": "^0.1.0",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "reset-css": "^5.0.2",
     "riimut": "^0.9.1",
     "sass": "^1.105.1",
@@ -54,7 +54,7 @@
     "next-router-mock": "^1.0.5",
     "node-mocks-http": "^1.17.2",
     "prettier": "3.9.9",
-    "react-test-renderer": "19.3.0",
+    "react-test-renderer": "19.3.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
